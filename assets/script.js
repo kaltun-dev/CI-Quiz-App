@@ -30,7 +30,7 @@ function selectAnswer(){
 
 }
 
-const questions [
+const questions = [
     {
         question: 'who founded LinkedIn?',
         answers: [
