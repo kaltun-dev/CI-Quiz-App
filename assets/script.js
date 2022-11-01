@@ -1,4 +1,5 @@
 const startButton = document.getElementById('start-btn')
+const nextButton = document.getElementById('next-btn')
 const questionsContainerElement = document.getElementById('question-container')
 
 const questionElement = document.getElementById('question')
@@ -18,17 +19,33 @@ function startGame() {
 }
 
 function setNextQuestion() {
+    resetState()
     showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
 function showQuestion(question) {
     questionElement.innerText = question.question
-
+    question.answers.forEach(answer => {
+        const button = document.createElement('button')
+        button.innerText = answer.text
+        button.classList.add('btn')
+        if ( answer.correct) {
+            button.dataset.correct = answer.correct
+        }
+        button.addEventListener('click',selectAnswer)
+        answerButtonsElement.appendChild(button)
+    })
 }
 
-
+function resetState(){
+    nextButton.classList.add('hide')
+    while(answerButtonsElement.firstChild){
+        answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+    }
+    
+}
 function selectAnswer(){
-
+    
 }
 
 const questions = [
