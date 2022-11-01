@@ -22,6 +22,7 @@ function setNextQuestion() {
 }
 
 function showQuestion (question) {
+    questionElement.innerText = question.question
 
 }
 
