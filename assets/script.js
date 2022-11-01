@@ -1,5 +1,5 @@
 const startButton = document.getElementById('start-btn')
-const questionsContainerElement = document.getElementById('questions-container')
+const questionsContainerElement = document.getElementById('question-container')
 
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
