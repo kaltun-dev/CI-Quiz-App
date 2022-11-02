@@ -92,92 +92,92 @@ const questions = [
     {
         question: 'who founded LinkedIn?',
         answers: [
-            {text: 'answer1', correct: true },
-            {text: 'answer2', correct: false},
-            {text: 'answer3', correct: false},
-            {text: 'answer4', correct: false}
+            {text: 'Jeff Weiner', correct: false },
+            {text: 'Reid Hoffman', correct: true},
+            {text: 'James Chuong', correct: false},
+            {text: 'Michelle Yee', correct: false}
         ]
     },
     {
         question: 'AWS is a cloud service by which company?',
         answers: [
-            {text: 'answer1', correct: true },
-            {text: 'answer2', correct: false},
-            {text: 'answer3', correct: false},
-            {text: 'answer4', correct: false}
+            {text: 'Apple', correct: false },
+            {text: 'Google', correct: false},
+            {text: 'Amazon', correct: true},
+            {text: 'Microsoft', correct: false}
         ]
     },
     
     {
-        question: 'which tech company started from a garage?',
+        question: 'which of these became the first company to hit $1 trillion in evaluation?',
         answers: [
-            {text: 'answer1', correct: true },
-            {text: 'answer2', correct: false},
-            {text: 'answer3', correct: false},
-            {text: 'answer4', correct: false}
+            {text: 'Apple', correct: true },
+            {text: 'Google', correct: false},
+            {text: 'Amazon', correct: false},
+            {text: 'Saudi Aramaco', correct: false}
         ]
     },
     {
         question: 'the Android operating system was first developed by who?',
         answers: [
-            {text: 'answer1', correct: true },
-            {text: 'answer2', correct: false},
-            {text: 'answer3', correct: false},
-            {text: 'answer4', correct: false}
+            {text: 'Netflix', correct: false},
+            {text: 'Samsung', correct: false},
+            {text: 'Android Inc', correct: true},
+            {text: 'Google', correct: false}
         ]
     },
     {
         question: 'twitter was recently bought by whom?',
         answers: [
-            {text: 'answer1', correct: true },
-            {text: 'answer2', correct: false},
-            {text: 'answer3', correct: false},
-            {text: 'answer4', correct: false}
+            {text: 'Sundar Pichai', correct: false },
+            {text: 'Elon Mask', correct: true},
+            {text: 'Jeff Bezos', correct: false},
+            {text: 'Rishi Sunak', correct: false}
         ]
     },
     {
-        question: 'who is the leading comany for AI technologies?',
+        question: 'In 2017, Samsung overtook which Silicon Valley company as the largest semiconductor chip maker in the world?',
         answers: [
-            {text: 'answer1', correct: true },
-            {text: 'answer2', correct: false},
-            {text: 'answer3', correct: false},
-            {text: 'answer4', correct: false}
+            {text: 'Intel', correct: true },
+            {text: 'IBM', correct: false},
+            {text: 'Micron', correct: false},
+            {text: 'Qualcom', correct: false}
         ]
     },
     {
-        question: 'what does meta specialise in?',
+        question: 'Which music, video streaming and podcast service was officially launched in October 2008?',
         answers: [
-            {text: 'answer1', correct: true },
-            {text: 'answer2', correct: false},
-            {text: 'answer3', correct: false},
-            {text: 'answer4', correct: false}
+            {text: 'NetFlix', correct: false },
+            {text: 'Audible', correct: false},
+            {text: 'Spotify', correct: true},
+            {text: 'FM Radio', correct: false}
         ]
     },
     {
         question: 'as of 2022 which comapny is in the lead for cloud computing?',
         answers: [
-            {text: 'answer1', correct: true },
-            {text: 'answer2', correct: false},
-            {text: 'answer3', correct: false},
-            {text: 'answer4', correct: false}
+            {text: 'Microsoft Azure', correct: false},
+            {text: 'Amazon AWS', correct: true},
+            {text: 'Google Cloud', correct: false},
+            {text: 'Tencent', correct: false}
         ]
     },
     {
-        question: 'alibaba is a leading tech company in which country?',
+        question: 'alibaba and Tencent are the leading tech companies in which country?',
         answers: [
-            {text: 'answer1', correct: true },
-            {text: 'answer2', correct: false},
-            {text: 'answer3', correct: false},
-            {text: 'answer4', correct: false}
+            {text: 'Saudi Arabia', correct: false},
+            {text: 'Malaysia', correct: false},
+            {text: 'China', correct: true},
+            {text: 'United Arab Emerites', correct: false}
         ]
     },
     {
-        question: 'monzo is an online bank based in which country?',
+        question: 'monzo is a online banking fintech based in which country?',
         answers: [
-            {text: 'answer1', correct: true },
-            {text: 'answer2', correct: false},
-            {text: 'answer3', correct: false},
-            {text: 'answer4', correct: false}
+            {text: 'UK', correct: true },
+            {text: 'Germany', correct: false},
+            {text: 'Sweden', correct: false},
+            {text: 'USA', correct: false}
         ]
     }
 ]
