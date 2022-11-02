@@ -4,6 +4,10 @@ const questionsContainerElement = document.getElementById('question-container')
 
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
+const quizRules = document.getElementById('quiz-rules')
+const easyLevel = document.getElementById('easy')
+const mediumLevel = document.getElementById('medium')
+const hardLevel = document.getElementById('hard')
 
 let shuffledQuestions, currentQuestionIndex
 
@@ -16,6 +20,10 @@ nextButton.addEventListener('click', () => {
 
 function startGame() {
     startButton.classList.add('hide')
+    quizRules.classList.add('hide')
+    easyLevel.classList.add('hide')
+    mediumLevel.classList.add('hide')
+    hardLevel.classList.add('hide')
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionsContainerElement.classList.remove('hide')

@@ -13,4 +13,7 @@ iwas using getelmentbyid eventhough i didnt use id selctor but a class selector.
 
 problem 2 
 
-answers buttons and overflowing the center div container.
+answerbuttons and overflowing the center div container.
+
+solution
+styled new buttons, made body wider vh, increased container width and height and styled bottons with with flex column direction
