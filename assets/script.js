@@ -57,11 +57,15 @@ function showQuestion(question) {
         const button = document.createElement('button')
         button.innerText = answer.text
         button.classList.add('btn')
-        if ( answer.correct) {
-            button.dataset.correct = answer.correct
-        }
         button.addEventListener('click',selectAnswer)
         answerButtonsElement.appendChild(button)
+        if ( answer.correct) {
+            button.dataset.correct = answer.correct
+            score = score + 10
+            console.log(score)
+        }
+
+       
     })
 }
 
@@ -87,8 +91,8 @@ function selectAnswer(e){
         questionsContainerElement.classList.add('hide')
         finishText.classList.remove('hide')
         scorePlaceholder.classList.remove('hide')
-         // scorePlaceholder = `YOU HAVE SCORED ${score}`
-        //  document.querySelector('.placeHolder').textContent = `You have scored ${scores}`;
+        scorePlaceholder = `YOU HAVE SCORED ${score}`
+         document.querySelector('.placeHolder').innerHTML = `You have scored ${score}`;
         playAgain.classList.remove('hide')
     }
 }
