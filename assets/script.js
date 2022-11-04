@@ -7,6 +7,10 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 const quizRules = document.getElementById('quiz-rules')
 const easyLevel = document.getElementById('easy')
 const hardLevel = document.getElementById('hard')
+const finishText = document.getElementById('finish-text')
+let scorePlaceholder = document.getElementById('score')
+const playAgain = document.getElementById('play-again-btn')
+
 // const container = document.getElementById('container')
 
 let shuffledQuestions, currentQuestionIndex
@@ -71,6 +75,12 @@ function selectAnswer(e){
         // startButton.innerText = 'Restart'
         // startButton.classList.remove('hide')
         //  step 1 questionsContainerElement to add hide
+        questionsContainerElement.classList.add('hide')
+        finishText.classList.remove('hide')
+        scorePlaceholder.classList.remove('hide')
+        scorePlaceholder = `YOU HAVE SCORE ${score}`
+        playAgain.classList.remove('hide')
+
         // finish div to add
         // you scored 20 placeholsder
         // play again buttton
