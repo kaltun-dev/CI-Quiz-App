@@ -42,6 +42,15 @@ function setNextQuestion() {
     showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
+// trying  to save score
+// function scores() {
+//     if (answer.correct) {
+//         score = (score + 10)
+//     } else {
+//     score = score
+//     }
+//     }
+
 function showQuestion(question) {
     questionElement.innerText = question.question
     question.answers.forEach(answer => {
@@ -50,7 +59,6 @@ function showQuestion(question) {
         button.classList.add('btn')
         if ( answer.correct) {
             button.dataset.correct = answer.correct
-            score = (score + 10)
         }
         button.addEventListener('click',selectAnswer)
         answerButtonsElement.appendChild(button)
@@ -76,13 +84,11 @@ function selectAnswer(e){
     if (shuffledQuestions.length > currentQuestionIndex + 1 ) {
         nextButton.classList.remove('hide')
     } else {
-        // startButton.innerText = 'Restart'
-        // startButton.classList.remove('hide')
-        //  step 1 questionsContainerElement to add hide
         questionsContainerElement.classList.add('hide')
         finishText.classList.remove('hide')
         scorePlaceholder.classList.remove('hide')
-        // scorePlaceholder = `YOU HAVE SCORED ${score}`
+         // scorePlaceholder = `YOU HAVE SCORED ${score}`
+        //  document.querySelector('.placeHolder').textContent = `You have scored ${scores}`;
         playAgain.classList.remove('hide')
     }
 }

@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Lora&display=swap');
 
 html {
-    background-color: #000000;
+    /* background-color: #000000; */
     font-family:'Lora', 'Cormorant Garamond', serif;
+    
 }
 
 body {
     padding: 0;
     margin: 0;
-    width: 100vw;
-    height: 100vh; 
+    /* width: 100vw;
+    height: 100vh;  */
+    background-image: url("assets/Big-Tech.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     
 }
 
@@ -117,6 +121,10 @@ width: 50%;
     margin: 10px;
     
    
+}
+
+#rules-div {
+    text-align: center;
 }
 
 .hide {
