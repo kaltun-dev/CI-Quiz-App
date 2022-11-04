@@ -8,19 +8,26 @@ const quizRules = document.getElementById('quiz-rules')
 const easyLevel = document.getElementById('easy')
 const hardLevel = document.getElementById('hard')
 const finishText = document.getElementById('finish-text')
-let scorePlaceholder = document.getElementById('score')
 const playAgain = document.getElementById('play-again-btn')
+let scorePlaceholder = document.getElementById('score')
 
-// const container = document.getElementById('container')
 
-let shuffledQuestions, currentQuestionIndex
+let shuffledQuestions, currentQuestionIndex, score
 
+
+
+
+
+function rules () {
+    quizRules.addEventListener('click').innerHTML = 'dfghjk'
+
+}
+startButton.addEventListener('click', startGame)
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     setNextQuestion()
 })
-
 
 function startGame() {
     startButton.classList.add('hide')
@@ -30,6 +37,7 @@ function startGame() {
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionsContainerElement.classList.remove('hide')
+    score = 0
     setNextQuestion()
 
 }
@@ -47,6 +55,7 @@ function showQuestion(question) {
         button.classList.add('btn')
         if ( answer.correct) {
             button.dataset.correct = answer.correct
+            score = (score + 10)
         }
         button.addEventListener('click',selectAnswer)
         answerButtonsElement.appendChild(button)
@@ -78,16 +87,29 @@ function selectAnswer(e){
         questionsContainerElement.classList.add('hide')
         finishText.classList.remove('hide')
         scorePlaceholder.classList.remove('hide')
-        scorePlaceholder = `YOU HAVE SCORE ${score}`
+        // scorePlaceholder = `YOU HAVE SCORED ${score}`
         playAgain.classList.remove('hide')
-
-        // finish div to add
-        // you scored 20 placeholsder
-        // play again buttton
-
     }
-   
 }
+
+playAgain.addEventListener('click', function resetGame () {
+initial()
+})
+
+function initial () {
+    
+    questionsContainerElement.classList.add('hide')
+    score = 0
+    startButton.classList.remove('hide')
+    quizRules.classList.remove('hide')
+    easyLevel.classList.remove('hide')
+    hardLevel.classList.remove('hide')
+    finishText.classList.add('hide')
+    scorePlaceholder.classList.add('hide')
+    playAgain.classList.add('hide')
+}
+
+
 
 function setStatusClass(element, correct) {
     clearStatusClass(element)
