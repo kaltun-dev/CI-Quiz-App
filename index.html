@@ -23,17 +23,23 @@
             </div>
         </div>
         <div class="controls">
-           <button id="quiz-rules" class="btn" >Rules</button>
+           <button id="quiz-rules" class="btn" >How to play</button>
            <button id="easy" class="btn" >Easy</button>
-           <button id="medium" class="btn" >Medium</button>
            <button id="hard" class="btn" >Hard</button>
-           <button id="start-btn" class="start-btn btn">Start</button> 
+           <button id="start-btn" class="start-btn btn">Play</button> 
            <button id="next-btn" class="next-btn btn hide" >Next</button>
+           <h3 id="finish-text" class="btn hide"> Congratulations on finishing the quiz.</h3>
+           <p id="score" class="btn hide">YOU HAVE SCORE --</p>
+           <button id="play-again-btn" class="btn hide" >Play Again</button>
 
         </div>
+        <div id="finish" hide>
+            <button id="play-again-btn" class="btn hide" >Play Again</button>
+        </div>
+    
     </div>
 <!-- rules modal tab-->
-    <div class="rules-modal hide">
+    <!-- <div class="rules-modal hide">
         <button class="close-tab">&times;</button>
         <h1>quiz Rules</h1>
         <p>
@@ -42,7 +48,7 @@
             choose diffrent difficulty levels. easy is 10 questions, medoum is 15 questions and hard is 20 questions
             save you're highscore.</p>
 
-    </div>
+    </div> -->
 
     <script src="assets/script.js"></script>
 </body>

@@ -6,8 +6,8 @@ const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 const quizRules = document.getElementById('quiz-rules')
 const easyLevel = document.getElementById('easy')
-const mediumLevel = document.getElementById('medium')
 const hardLevel = document.getElementById('hard')
+// const container = document.getElementById('container')
 
 let shuffledQuestions, currentQuestionIndex
 
@@ -22,7 +22,6 @@ function startGame() {
     startButton.classList.add('hide')
     quizRules.classList.add('hide')
     easyLevel.classList.add('hide')
-    mediumLevel.classList.add('hide')
     hardLevel.classList.add('hide')
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
@@ -69,8 +68,13 @@ function selectAnswer(e){
     if (shuffledQuestions.length > currentQuestionIndex + 1 ) {
         nextButton.classList.remove('hide')
     } else {
-        startButton.innerText = 'Restart'
-        startButton.classList.remove('hide')
+        // startButton.innerText = 'Restart'
+        // startButton.classList.remove('hide')
+        //  step 1 questionsContainerElement to add hide
+        // finish div to add
+        // you scored 20 placeholsder
+        // play again buttton
+
     }
    
 }
