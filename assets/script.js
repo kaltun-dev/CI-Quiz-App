@@ -9,19 +9,14 @@ const easyLevel = document.getElementById('easy')
 const hardLevel = document.getElementById('hard')
 const finishText = document.getElementById('finish-text')
 const playAgain = document.getElementById('play-again-btn')
+const rulesDiv = document.getElementById('rules-div')
+const closeBtn = document.getElementById('close-btn')
 let scorePlaceholder = document.getElementById('score')
 
 
 let shuffledQuestions, currentQuestionIndex, score
 
 
-
-
-
-function rules () {
-    quizRules.addEventListener('click').innerHTML = 'dfghjk'
-
-}
 startButton.addEventListener('click', startGame)
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
@@ -107,9 +102,19 @@ function initial () {
     finishText.classList.add('hide')
     scorePlaceholder.classList.add('hide')
     playAgain.classList.add('hide')
+    rulesDiv.classList.add('hide')
 }
 
+quizRules.addEventListener('click', function() {
+    startButton.classList.add('hide')
+    quizRules.classList.add('hide')
+    easyLevel.classList.add('hide')
+    hardLevel.classList.add('hide')
+    questionsContainerElement.classList.add('hide')
+    rulesDiv.classList.remove('hide')
+    closeBtn.addEventListener('click', initial)
 
+})
 
 function setStatusClass(element, correct) {
     clearStatusClass(element)
