@@ -7,14 +7,15 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 const quizRules = document.getElementById('quiz-rules')
 const easyLevel = document.getElementById('easy')
 const hardLevel = document.getElementById('hard')
-const finishText = document.getElementById('finish-text')
+const finishText = document.getElementById('finish-text-score')
 const playAgain = document.getElementById('play-again-btn')
 const rulesDiv = document.getElementById('rules-div')
 const closeBtn = document.getElementById('close-btn')
-let scorePlaceholder = document.getElementById('score')
+// let scoreHolder = document.getElementById('score')
 
 
-let shuffledQuestions, currentQuestionIndex, score
+let shuffledQuestions, currentQuestionIndex
+let score = 0
 
 
 startButton.addEventListener('click', startGame)
@@ -42,18 +43,11 @@ function setNextQuestion() {
     showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
-// trying  to save score
-// function scores() {
-//     if (answer.correct) {
-//         score = (score + 10)
-//     } else {
-//     score = score
-//     }
-//     }
+
 
 function showQuestion(question) {
     questionElement.innerText = question.question
-    question.answers.forEach(answer => {
+    question.answer.forEach(answer => {
         const button = document.createElement('button')
         button.innerText = answer.text
         button.classList.add('btn')
@@ -62,7 +56,7 @@ function showQuestion(question) {
             button.dataset.correct = answer.correct
             score = score + 10
             console.log(score)
-        }
+        } 
         button.addEventListener('click',selectAnswer)
         answerButtonsElement.appendChild(button)
        
@@ -90,9 +84,8 @@ function selectAnswer(e){
     } else {
         questionsContainerElement.classList.add('hide')
         finishText.classList.remove('hide')
-        scorePlaceholder.classList.remove('hide')
-        scorePlaceholder = `YOU HAVE SCORED ${score}`
-         document.getElementById('placeHolder').innerText = `You have scored ${score}`;
+        finishText = `congratulations on finishing the quiz, YOU HAVE SCORED ${score}`
+         document.getElementById('finishText').innerText = `You have scored ${score}`;
         playAgain.classList.remove('hide')
     }
 }
@@ -142,7 +135,7 @@ function clearStatusClass(element) {
 const questions = [
     {
         question: 'who founded LinkedIn?',
-        answers: [
+        answer: [
             {text: 'Jeff Weiner', correct: false },
             {text: 'Reid Hoffman', correct: true},
             {text: 'James Chuong', correct: false},
@@ -151,7 +144,7 @@ const questions = [
     },
     {
         question: 'AWS is a cloud service by which company?',
-        answers: [
+        answer: [
             {text: 'Apple', correct: false },
             {text: 'Google', correct: false},
             {text: 'Amazon', correct: true},
@@ -161,7 +154,7 @@ const questions = [
     
     {
         question: 'which of these became the first company to hit $1 trillion in evaluation?',
-        answers: [
+        answer: [
             {text: 'Apple', correct: true },
             {text: 'Google', correct: false},
             {text: 'Amazon', correct: false},
@@ -170,7 +163,7 @@ const questions = [
     },
     {
         question: 'the Android operating system was first developed by who?',
-        answers: [
+        answer: [
             {text: 'Netflix', correct: false},
             {text: 'Samsung', correct: false},
             {text: 'Android Inc', correct: true},
@@ -179,7 +172,7 @@ const questions = [
     },
     {
         question: 'twitter was recently bought by whom?',
-        answers: [
+        answer: [
             {text: 'Sundar Pichai', correct: false },
             {text: 'Elon Mask', correct: true},
             {text: 'Jeff Bezos', correct: false},
@@ -188,7 +181,7 @@ const questions = [
     },
     {
         question: 'In 2017, Samsung overtook which Silicon Valley company as the largest semiconductor chip maker in the world?',
-        answers: [
+        answer: [
             {text: 'Intel', correct: true },
             {text: 'IBM', correct: false},
             {text: 'Micron', correct: false},
@@ -197,7 +190,7 @@ const questions = [
     },
     {
         question: 'Which music, video streaming and podcast service was officially launched in October 2008?',
-        answers: [
+        answer: [
             {text: 'NetFlix', correct: false },
             {text: 'Audible', correct: false},
             {text: 'Spotify', correct: true},
@@ -206,7 +199,7 @@ const questions = [
     },
     {
         question: 'as of 2022 which comapny is in the lead for cloud computing?',
-        answers: [
+        answer: [
             {text: 'Microsoft Azure', correct: false},
             {text: 'Amazon AWS', correct: true},
             {text: 'Google Cloud', correct: false},
@@ -215,7 +208,7 @@ const questions = [
     },
     {
         question: 'alibaba and Tencent are the leading tech companies in which country?',
-        answers: [
+        answer: [
             {text: 'Saudi Arabia', correct: false},
             {text: 'Malaysia', correct: false},
             {text: 'China', correct: true},
@@ -224,7 +217,7 @@ const questions = [
     },
     {
         question: 'monzo is a online banking fintech based in which country?',
-        answers: [
+        answer: [
             {text: 'UK', correct: true },
             {text: 'Germany', correct: false},
             {text: 'Sweden', correct: false},
