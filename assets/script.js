@@ -11,7 +11,7 @@ let finishText = document.getElementById('finish-text-score')
 const playAgain = document.getElementById('play-again-btn')
 const rulesDiv = document.getElementById('rules-div')
 const closeBtn = document.getElementById('close-btn')
-// let scoreHolder = document.getElementById('score')
+
 
 
 let shuffledQuestions, currentQuestionIndex
@@ -68,9 +68,8 @@ function showQuestion(question) {
         button.addEventListener('click',selectAnswer)
         answerButtonsElement.appendChild(button)
         if ( answer.correct) {
-            button.dataset.correct = answer.correct.true
-            score++
-            console.log(score)
+            button.dataset.correct = true
+       
         } 
        
     })
@@ -88,6 +87,9 @@ function resetState(){
 function selectAnswer(e){
     const selectedButton = e.target
     const correct = selectedButton.dataset.correct
+
+    if (correct) score++;
+
     setStatusClass(document.body,correct)
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
@@ -97,8 +99,7 @@ function selectAnswer(e){
     } else {
         questionsContainerElement.classList.add('hide')
         finishText.classList.remove('hide')
-        // finishText = `congratulations on finishing the quiz, YOU HAVE SCORED ${score}`
-        document.getElementById('finish-text-score').innerHTML = `Congratulations on finishing the game. You have scored ${score}`;
+        document.getElementById('finish-text-score').innerHTML = `Congratulations on finishing the game. You have scored ${score}/ ${questions.length}`;
         playAgain.classList.remove('hide')
     }
 }
@@ -107,19 +108,6 @@ playAgain.addEventListener('click', function resetGame () {
 initial()
 })
 
-// function initial () {
-    
-//     questionsContainerElement.classList.add('hide')
-//     score = 0
-//     startButton.classList.remove('hide')
-//     quizRules.classList.remove('hide')
-//     easyLevel.classList.remove('hide')
-//     hardLevel.classList.remove('hide')
-//     finishText.classList.add('hide')
-//     scorePlaceholder.classList.add('hide')
-//     playAgain.classList.add('hide')
-//     rulesDiv.classList.add('hide')
-// }
 
 quizRules.addEventListener('click', function() {
     startButton.classList.add('hide')
