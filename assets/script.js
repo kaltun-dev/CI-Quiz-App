@@ -7,7 +7,7 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 const quizRules = document.getElementById('quiz-rules')
 const easyLevel = document.getElementById('easy')
 const hardLevel = document.getElementById('hard')
-const finishText = document.getElementById('finish-text-score')
+let finishText = document.getElementById('finish-text-score')
 const playAgain = document.getElementById('play-again-btn')
 const rulesDiv = document.getElementById('rules-div')
 const closeBtn = document.getElementById('close-btn')
@@ -15,8 +15,22 @@ const closeBtn = document.getElementById('close-btn')
 
 
 let shuffledQuestions, currentQuestionIndex
-let score = 0
+let score;
 
+
+function initial () {
+    
+    questionsContainerElement.classList.add('hide')
+    score = 0
+    startButton.classList.remove('hide')
+    quizRules.classList.remove('hide')
+    easyLevel.classList.remove('hide')
+    hardLevel.classList.remove('hide')
+    finishText.classList.add('hide')
+    finishText.classList.add('hide')
+    playAgain.classList.add('hide')
+    rulesDiv.classList.add('hide')
+}
 
 startButton.addEventListener('click', startGame)
 startButton.addEventListener('click', startGame)
@@ -51,14 +65,13 @@ function showQuestion(question) {
         const button = document.createElement('button')
         button.innerText = answer.text
         button.classList.add('btn')
-        
-        if ( answer.correct) {
-            button.dataset.correct = answer.correct
-            score = score + 10
-            console.log(score)
-        } 
         button.addEventListener('click',selectAnswer)
         answerButtonsElement.appendChild(button)
+        if ( answer.correct) {
+            button.dataset.correct = answer.correct.true
+            score++
+            console.log(score)
+        } 
        
     })
 }
@@ -84,8 +97,8 @@ function selectAnswer(e){
     } else {
         questionsContainerElement.classList.add('hide')
         finishText.classList.remove('hide')
-        finishText = `congratulations on finishing the quiz, YOU HAVE SCORED ${score}`
-         document.getElementById('finishText').innerText = `You have scored ${score}`;
+        // finishText = `congratulations on finishing the quiz, YOU HAVE SCORED ${score}`
+        document.getElementById('finish-text-score').innerHTML = `Congratulations on finishing the game. You have scored ${score}`;
         playAgain.classList.remove('hide')
     }
 }
@@ -94,19 +107,19 @@ playAgain.addEventListener('click', function resetGame () {
 initial()
 })
 
-function initial () {
+// function initial () {
     
-    questionsContainerElement.classList.add('hide')
-    score = 0
-    startButton.classList.remove('hide')
-    quizRules.classList.remove('hide')
-    easyLevel.classList.remove('hide')
-    hardLevel.classList.remove('hide')
-    finishText.classList.add('hide')
-    scorePlaceholder.classList.add('hide')
-    playAgain.classList.add('hide')
-    rulesDiv.classList.add('hide')
-}
+//     questionsContainerElement.classList.add('hide')
+//     score = 0
+//     startButton.classList.remove('hide')
+//     quizRules.classList.remove('hide')
+//     easyLevel.classList.remove('hide')
+//     hardLevel.classList.remove('hide')
+//     finishText.classList.add('hide')
+//     scorePlaceholder.classList.add('hide')
+//     playAgain.classList.add('hide')
+//     rulesDiv.classList.add('hide')
+// }
 
 quizRules.addEventListener('click', function() {
     startButton.classList.add('hide')
