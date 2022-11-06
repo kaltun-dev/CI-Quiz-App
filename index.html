@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="assets/images/favicon-tech-quiz.png">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Quiz App</title>
+    <title>Tech Quiz </title>
 </head>
 <body>
+    <!-- website name -->
     <div class="title">
       <h1>Tech Companies Quiz</h1>
     </div>
-    
+    <!-- questions container  div-->
     <div class="container">
         <div id="question-container" class="hide">
             <div id="question"> question </div>
@@ -23,22 +24,17 @@
                 <button class="btn">answer 3</button>
             </div>
         </div>
+        <!-- starting buttons container div -->
         <div class="controls">
            <button id="quiz-rules" class="btn" >How to play</button>
            <button id="easy" class="btn" >Easy</button>
            <button id="hard" class="btn" >Hard</button>
            <button id="start-btn" class="start-btn btn">Play</button> 
            <button id="next-btn" class="next-btn btn hide" >Next</button>
-
-        <div id="end-container" >
-            <input id="name-input" class="hide" type="text" id="fname" name="fname" value="what is your Name?"><br>
-            <input id="submit-input" class="hide"  type="submit" value="Submit">
-            <p id="finish-text-score" class="btn hide"> Congratulations on finishing the quiz. you have scored </p>
-           <button id="play-again-btn" class="btn hide" >Play Again</button>
         </div>
 
-        </div>
-        <div id="rules-div" class="hide">
+         <!-- pop up rules card container div -->
+         <div id="rules-div" class="hide">
             <h4>quiz Rules</h4>
             <p>
             Each correct question recives 10 points.
@@ -47,6 +43,16 @@
             See your score and play again..</p>
             <button id="close-btn" class="btn">Close</button>
         </div>
+
+           <!-- end of quiz container -->
+        <div id="end-container" >
+            <input id="name-input" class="hide" type="text" id="fname" name="fname" value="what is your Name?"><br>
+            <input id="submit-input" class="hide"  type="submit" value="Submit">
+            <p id="finish-text-score" class="btn hide"> Congratulations on finishing the quiz. you have scored </p>
+           <button id="play-again-btn" class="btn hide" >Play Again</button>
+        </div>
+
+       
     
     </div>
 

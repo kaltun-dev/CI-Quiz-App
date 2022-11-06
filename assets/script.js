@@ -1,7 +1,8 @@
+
+// external variables
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
 const questionsContainerElement = document.getElementById('question-container')
-
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 const quizRules = document.getElementById('quiz-rules')
@@ -17,7 +18,7 @@ const closeBtn = document.getElementById('close-btn')
 let shuffledQuestions, currentQuestionIndex
 let score;
 
-
+//initial setting for the quiz
 function initial () {
     
     questionsContainerElement.classList.add('hide')
@@ -32,13 +33,17 @@ function initial () {
     rulesDiv.classList.add('hide')
 }
 
+//event listener for start button and next button
 startButton.addEventListener('click', startGame)
 startButton.addEventListener('click', startGame)
+
+//show current question, increment and set next question
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     setNextQuestion()
 })
 
+//what to do when quiz starts
 function startGame() {
     startButton.classList.add('hide')
     quizRules.classList.add('hide')
@@ -51,14 +56,14 @@ function startGame() {
     setNextQuestion()
 
 }
-
+// what to do for next question
 function setNextQuestion() {
     resetState()
     showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
 
-
+// for-loops the questions object and determins the correct answer from boolean correct: true.
 function showQuestion(question) {
     questionElement.innerText = question.question
     question.answer.forEach(answer => {
@@ -75,6 +80,7 @@ function showQuestion(question) {
     })
 }
 
+//clears the buttons for next question
 function resetState(){
     clearStatusClass(document.body)
     nextButton.classList.add('hide')
@@ -84,19 +90,22 @@ function resetState(){
     }
     
 }
+
+//selects answer from questions object and increments score if correct
 function selectAnswer(e){
     const selectedButton = e.target
     const correct = selectedButton.dataset.correct
 
     if (correct) score++;
-
     setStatusClass(document.body,correct)
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
+
+    // if there are questions left then show next button 
     if (shuffledQuestions.length > currentQuestionIndex + 1 ) {
         nextButton.classList.remove('hide')
-    } else {
+    } else { // else end the game and show the score after name input
         questionsContainerElement.classList.add('hide')
         finishText.classList.remove('hide')
         document.getElementById('finish-text-score').innerHTML = `Congratulations on finishing the game. You have scored ${score}/ ${questions.length}`;
@@ -104,11 +113,12 @@ function selectAnswer(e){
     }
 }
 
+//play again resets game to initial setting
 playAgain.addEventListener('click', function resetGame () {
 initial()
 })
 
-
+// pop up card for quiz rules with close button
 quizRules.addEventListener('click', function() {
     startButton.classList.add('hide')
     quizRules.classList.add('hide')
@@ -119,7 +129,7 @@ quizRules.addEventListener('click', function() {
     closeBtn.addEventListener('click', initial)
 
 })
-
+//adds class correct to style so color can change
 function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {
@@ -129,10 +139,13 @@ function setStatusClass(element, correct) {
     }
 }
 
+//clears class styling for next question
 function clearStatusClass(element) {
     element.classList.remove('correct')
     element.classList.remove('wrong')
 }
+
+//questions object array.
 const questions = [
     {
         question: 'who founded LinkedIn?',
