@@ -48,6 +48,22 @@ h1 {
     flex-direction: column; */
     
 }
+#end-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.5 rem;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: orange;
+    color: #000000;
+}
+
+#form {
+    text-align: center;
+    margin: auto;
+    border-radius: 10px;
+}
 
 .btn-flex {
 
@@ -82,6 +98,7 @@ padding-bottom: 20px;
     /* align-items: center; */
     justify-content: center;
     width: 70%;
+    
     
     
 }
