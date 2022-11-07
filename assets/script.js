@@ -22,12 +22,14 @@ const form = document.getElementById('form')
 
 
 let shuffledQuestions, currentQuestionIndex
+let easy10;
+let medium15;
+let hard20;
 let score;
 let rounds;
 
 //initial setting for the quiz
 function initial () {
-    
     questionsContainerElement.classList.add('hide')
     score = 0
     // startButton.classList.remove('hide')
@@ -39,29 +41,29 @@ function initial () {
     playAgain.classList.add('hide')
     rulesDiv.classList.add('hide')
     form.classList.add('hide')
-    
-    
-    
 }
 
 //event listener for different levels and the next button
-easyLevel.addEventListener('click', function() {
-    // rounds = Number(button.dataset.rounds);
-    // shuffledQuestions.length = 10;
-    startGame();
-     easyLevel = questions.slice(0,9);
-})
-mediumLevel.addEventListener('click', startGame, function() {
-    shuffledQuestions.length = 15;
-    rounds = Number(button.dataset.rounds);
-})
-hardLevel.addEventListener('click', startGame, function() {
-    shuffledQuestions.length = 20;
-    rounds = Number(button.dataset.rounds);
-})
+easyLevel.addEventListener('click', startGame)
+mediumLevel.addEventListener('click', startGame,)
+hardLevel.addEventListener('click', startGame)
+
+// different levels
+function levels () {
+ if (easyLevel){
+            // easy10 = questions.slice(0,9);
+            shuffledQuestions = questions.sort(() => Math.random() - .5).slice(0,10)
+        } else if (mediumLevel) {
+            // medium15 = questions.slice(0,14);
+            shuffledQuestions = questions.sort(() => Math.random() - .5).slice(0,15)
+        } else if (hardLevel) {
+             // hard20 = questions.slice(0,19);
+             shuffledQuestions = questions.sort(() => Math.random() - .5).slice(0,20)
+        }
+        }
 
 
-//show current question, increment and set next question
+//when next buttin is clicked: show current question + 1, increment and set next question
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     setNextQuestion()
@@ -75,18 +77,21 @@ function startGame() {
     mediumLevel.classList.add('hide')
     hardLevel.classList.add('hide')
     myLabel.classList.add('hide')
-    shuffledQuestions = questions.sort(() => Math.random() - .5)
+    // shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionsContainerElement.classList.remove('hide')
     score = 0
+    levels();
     setNextQuestion()
     
 
+   
 }
 // what to do for next question
 function setNextQuestion() {
     resetState()
     showQuestion(shuffledQuestions[currentQuestionIndex])
+    
 }
 
 
@@ -144,7 +149,7 @@ function selectAnswer(e){
             if (myName) {
                 form.classList.add('hide')
                 finishText.classList.remove('hide');
-                document.getElementById('finish-text-score').innerHTML = `Congratulations on finishing the game ${myName}. You have scored ${score}/ ${questions.length}`;
+                document.getElementById('finish-text-score').innerHTML = `thank you for taking part of the quiz ${myName}. You have scored ${score}/ ${questions.length}`;
                 playAgain.classList.remove('hide')
 
             } else {
