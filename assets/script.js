@@ -21,18 +21,15 @@ const form = document.getElementById('form')
 
 
 
-let shuffledQuestions, currentQuestionIndex
-let easy10;
-let medium15;
-let hard20;
+let shuffledQuestions;
+let currentQuestionIndex;
 let score;
-let rounds;
 
-//initial setting for the quiz
+
+//initial setting for the play again quiz
 function initial () {
     questionsContainerElement.classList.add('hide')
     score = 0
-    // startButton.classList.remove('hide')
     quizRules.classList.remove('hide')
     easyLevel.classList.remove('hide')
     mediumLevel.classList.remove('hide')
@@ -53,6 +50,7 @@ function levels () {
  if (easyLevel){
             // easy10 = questions.slice(0,9);
             shuffledQuestions = questions.sort(() => Math.random() - .5).slice(0,10)
+            console.log(easyLevel)
         } else if (mediumLevel) {
             // medium15 = questions.slice(0,14);
             shuffledQuestions = questions.sort(() => Math.random() - .5).slice(0,15)
@@ -77,11 +75,11 @@ function startGame() {
     mediumLevel.classList.add('hide')
     hardLevel.classList.add('hide')
     myLabel.classList.add('hide')
+    levels();
     // shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionsContainerElement.classList.remove('hide')
-    score = 0
-    levels();
+    score = 0;
     setNextQuestion()
     
 
