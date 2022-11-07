@@ -1,5 +1,5 @@
 
-// external variables
+// global variables
 // const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
 const questionsContainerElement = document.getElementById('question-container')
@@ -17,6 +17,7 @@ let myName = document.getElementById('myName')
 let myButton = document.getElementById('myButton')
 const myLabel = document.getElementById('myLabel')
 const form = document.getElementById('form')
+const endContainer = document.getElementById('end-container')
 
 
 
@@ -38,6 +39,7 @@ function initial () {
     playAgain.classList.add('hide')
     rulesDiv.classList.add('hide')
     form.classList.add('hide')
+    endContainer.classList.add('hide')
     
     
 }
@@ -70,12 +72,14 @@ function startGame() {
     easyLevel.classList.add('hide')
     mediumLevel.classList.add('hide')
     hardLevel.classList.add('hide')
+    endContainer.classList.add('hide')
     myLabel.classList.add('hide')
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionsContainerElement.classList.remove('hide')
     score = 0
     setNextQuestion()
+    
 
 }
 // what to do for next question
@@ -129,6 +133,7 @@ function selectAnswer(e){
         nextButton.classList.remove('hide')
     } else { // else end the game and show the score after name input
         questionsContainerElement.classList.add('hide')
+        endContainer.classList.remove('hide')
         form.classList.remove('hide')
         myLabel.classList.remove('hide')
         myName.classList.remove('hide')

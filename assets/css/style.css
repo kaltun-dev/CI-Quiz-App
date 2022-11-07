@@ -49,13 +49,14 @@ h1 {
     
 }
 #end-container {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column; */
+    /* display: block; */
     font-size: 1.5 rem;
     padding: 10px 20px;
     margin: 10px;
-    background-color: orange;
+    background-color: white;
     color: #000000;
 }
 
