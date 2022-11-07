@@ -46,8 +46,11 @@
 
            <!-- end of quiz container -->
         <div id="end-container" >
-            <input id="name-input" class="hide" type="text" id="fname" name="fname" value="what is your Name?"><br>
-            <input id="submit-input" class="hide"  type="submit" value="Submit">
+            <form id="form" class="hide">
+                <label for="fname"  id="myLabel" class="hide">Enter your name:</label><br>
+                <input  type="text" id="myName" name="fname" class="hide"><br>
+                <button type="button" id="myButton" class=" btn hide">Submit</button>
+            </form>
             <p id="finish-text-score" class="btn hide"> Congratulations on finishing the quiz. you have scored </p>
            <button id="play-again-btn" class="btn hide" >Play Again</button>
         </div>
