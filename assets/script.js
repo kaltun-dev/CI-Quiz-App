@@ -1,6 +1,6 @@
 
 // external variables
-const startButton = document.getElementById('start-btn')
+// const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
 const questionsContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
@@ -27,7 +27,7 @@ function initial () {
     
     questionsContainerElement.classList.add('hide')
     score = 0
-    startButton.classList.remove('hide')
+    // startButton.classList.remove('hide')
     quizRules.classList.remove('hide')
     easyLevel.classList.remove('hide')
     hardLevel.classList.remove('hide')
@@ -40,8 +40,10 @@ function initial () {
 }
 
 //event listener for start button and next button
-startButton.addEventListener('click', startGame)
-startButton.addEventListener('click', startGame)
+// startButton.addEventListener('click', startGame)
+easyLevel.addEventListener('click', startGame)
+hardLevel.addEventListener('click', startGame)
+
 
 //show current question, increment and set next question
 nextButton.addEventListener('click', () => {
@@ -51,11 +53,11 @@ nextButton.addEventListener('click', () => {
 
 //what to do when quiz starts
 function startGame() {
-    startButton.classList.add('hide')
+    // startButton.classList.add('hide')
     quizRules.classList.add('hide')
     easyLevel.classList.add('hide')
     hardLevel.classList.add('hide')
-    form.classList.add('hide')
+    myLabel.classList.add('hide')
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionsContainerElement.classList.remove('hide')
