@@ -1,40 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Lora&display=swap');
 
 html {
-    background-color: orange;
+    /* background-color: orange; */
     font-family:'Lora', 'Cormorant Garamond', serif;
+
     
 }
     
 body {
     padding: 0;
     margin: 0;
-    /* width: 100vw;
-    height: 100vh; 
+    width: 100%;
+    height: 100%; 
     background-image: url("/assets/images/big-tech.jpg");
-    /* background-size: cover; */
-    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: rgba(0, 0, 0, 0.475);
     
 }
 
+
 a {
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
     outline: none;
     text-align: center;
     font-size: 100%;
     margin-top: 30px;
     margin-bottom: 30px;
+    
 }
 #title {
-    color: #000000;
+    color: #ffffff;
     text-align: center;
     font-size: 200%;
-    margin-top: 30px;
-    margin-bottom: 30px;
     text-decoration: none;
     outline: none;
     font-weight: bolder;
+    background-color: #000000;
+    width: 50%;
+    height: 30%;
+    margin:  30px auto 30px auto;
+    border-radius: 10px;
 }
 .container.correct {
     background-color: lightgreen;
@@ -45,15 +52,16 @@ a {
 .container {
     /* width:800px;
     max-height: 80%; */
-    background-color: #fffefe;
+    background-color: #211e1ee5;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
+    color: #ffffff;
     /* width: 250px;
     height: 250px; */
     margin: auto;
-    width: 300px;
-    height: 70%;
+    width: 380px;
+    height: 350px;
      /* display: flex;
     justify-content:center;
     align-items: center;
@@ -68,8 +76,8 @@ a {
     font-size: 1.5 rem;
     padding: 10px 20px;
     margin: 10px;
-    background-color: white;
-    color: #000000;
+    /* background-color: #211e1ee5; */
+    color: #ffffff;
 }
 
 #form {
@@ -83,7 +91,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
     margin: 5px auto;
     flex-direction: column;
     
@@ -111,12 +119,14 @@ padding-bottom: 20px;
     /* align-items: center; */
     justify-content: center;
     width: 70%;
+    height: 10%;
     
     
     
 }
 .btn:hover {
-    border: #2c2c2c;
+    box-shadow: 0 0 10px 2px;
+    /* border: #2c2c2c; */
 }
 
 .btn.correct {
@@ -156,6 +166,7 @@ width: 50%;
 #rules-div {
     text-align: center;
     font-size: 15px;
+    color: #ffffff;
 }
 
 .hide {

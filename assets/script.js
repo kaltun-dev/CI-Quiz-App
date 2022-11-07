@@ -145,7 +145,7 @@ function selectAnswer(e){
             if (myName) {
                 form.classList.add('hide')
                 finishText.classList.remove('hide');
-                document.getElementById('finish-text-score').innerHTML = `thank you for taking part of the quiz ${myName}. You have scored ${score}/ ${questions.length}`;
+                document.getElementById('finish-text-score').innerHTML = `Thank you for taking part of the quiz ${myName}. You have scored ${score}/ ${questions.length}`;
                 playAgain.classList.remove('hide')
 
             } else {
@@ -261,7 +261,7 @@ const questions = [
         ]
     },
     {
-        question: 'As of 2022 which comapny is in the lead for cloud computing?',
+        question: 'As of 2022 which company is in the lead for cloud computing?',
         answer: [
             {text: 'Microsoft Azure', correct: false},
             {text: 'Amazon AWS', correct: true},
