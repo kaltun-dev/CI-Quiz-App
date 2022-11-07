@@ -197,7 +197,7 @@ function clearStatusClass(element) {
 //questions object array.
 const questions = [
     {
-        question: 'who founded LinkedIn?',
+        question: 'Who founded LinkedIn?',
         answer: [
             {text: 'Jeff Weiner', correct: false },
             {text: 'Reid Hoffman', correct: true},
@@ -216,7 +216,7 @@ const questions = [
     },
     
     {
-        question: 'which of these became the first company to hit $1 trillion in evaluation?',
+        question: 'Which of these became the first company to hit $1 trillion in evaluation?',
         answer: [
             {text: 'Apple', correct: true },
             {text: 'Google', correct: false},
@@ -225,7 +225,7 @@ const questions = [
         ]
     },
     {
-        question: 'the Android operating system was first developed by who?',
+        question: 'The Android operating system was first developed by who?',
         answer: [
             {text: 'Netflix', correct: false},
             {text: 'Samsung', correct: false},
@@ -234,7 +234,7 @@ const questions = [
         ]
     },
     {
-        question: 'twitter was recently bought by whom?',
+        question: 'Twitter was recently bought by whom?',
         answer: [
             {text: 'Sundar Pichai', correct: false },
             {text: 'Elon Mask', correct: true},
@@ -261,7 +261,7 @@ const questions = [
         ]
     },
     {
-        question: 'as of 2022 which comapny is in the lead for cloud computing?',
+        question: 'As of 2022 which comapny is in the lead for cloud computing?',
         answer: [
             {text: 'Microsoft Azure', correct: false},
             {text: 'Amazon AWS', correct: true},
@@ -270,16 +270,16 @@ const questions = [
         ]
     },
     {
-        question: 'alibaba and Tencent are the leading tech companies in which country?',
+        question: 'Alibaba and Tencent are the leading tech companies in which country?',
         answer: [
-            {text: 'Saudi Arabia', correct: false},
+            {text: 'Taiwan', correct: false},
             {text: 'Malaysia', correct: false},
             {text: 'China', correct: true},
-            {text: 'United Arab Emerites', correct: false}
+            {text: 'Singapore', correct: false}
         ]
     },
     {
-        question: 'monzo is a online banking fintech based in which country?',
+        question: 'Monzo is a online banking fintech based in which country?',
         answer: [
             {text: 'UK', correct: true },
             {text: 'Germany', correct: false},
@@ -288,93 +288,93 @@ const questions = [
         ]
     },
     {
-        question: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  11?',
+        question: 'Which of these tech startups in not from the UK?',
         answer: [
-            {text: 'Jeff Weiner', correct: false },
-            {text: 'Reid Hoffman', correct: true},
-            {text: 'James Chuong', correct: false},
-            {text: 'Michelle Yee', correct: false}
+            {text: 'Revalut', correct: false },
+            {text: 'Deliveroo', correct: false},
+            {text: 'Monzo', correct: false},
+            {text: 'Airbnb', correct: true}
         ]
     },
     {
-        question: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  12',
+        question: 'Which company invented the hard disk drive?',
         answer: [
-            {text: 'Jeff Weiner', correct: false },
-            {text: 'Reid Hoffman', correct: true},
-            {text: 'James Chuong', correct: false},
-            {text: 'Michelle Yee', correct: false}
+            {text: 'Hitachi', correct: false},
+            {text: 'Xrox', correct: false},
+            {text: 'Fujitsu', correct: false},
+            {text: 'IBM', correct: true}
         ]
     },
     {
-        question: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  13',
+        question: 'Who created TikTok?',
         answer: [
-            {text: 'Jeff Weiner', correct: false },
-            {text: 'Reid Hoffman', correct: true},
-            {text: 'James Chuong', correct: false},
-            {text: 'Michelle Yee', correct: false}
+            {text: 'Jack Ma', correct: false },
+            {text: 'Xi jinping', correct: false},
+            {text: 'Zhang Yiming', correct: true},
+            {text: 'Yoa Ming', correct: false}
         ]
     },
     {
-        question: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  14?',
+        question: ' Google Chrome has a hidden mini-game that involves what?',
         answer: [
-            {text: 'Jeff Weiner', correct: false },
-            {text: 'Reid Hoffman', correct: true},
-            {text: 'James Chuong', correct: false},
-            {text: 'Michelle Yee', correct: false}
+            {text: 'Flappy Bird with a penguin', correct: false },
+            {text: 'ASCII Tetris', correct: false},
+            {text: 'A T-rex hurdeling cacti', correct: true},
+            {text: 'A typing game', correct: false}
         ]
     },
     {
-        question: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  15?',
+        question: ' Who created Siri (the AI powered digital assistant)?',
         answer: [
-            {text: 'Jeff Weiner', correct: false },
-            {text: 'Reid Hoffman', correct: true},
-            {text: 'James Chuong', correct: false},
-            {text: 'Michelle Yee', correct: false}
+            {text: 'MIT', correct: false },
+            {text: 'Apple', correct: false},
+            {text: 'Berkeley', correct: false},
+            {text: 'SRI/DARPA', correct: true}
         ]
     },
     {
-        question: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  16',
+        question: ' What is the worlds best-Selling PC game?',
         answer: [
-            {text: 'Jeff Weiner', correct: false },
-            {text: 'Reid Hoffman', correct: true},
-            {text: 'James Chuong', correct: false},
-            {text: 'Michelle Yee', correct: false}
+            {text: 'Tetris', correct: true },
+            {text: 'World of Warcraft', correct: false},
+            {text: 'Grand Theft Auto', correct: false},
+            {text: 'Minecraft', correct: false}
         ]
     },
     {
-        question: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  17?',
+        question: 'What year was Youtube Created?',
         answer: [
-            {text: 'Jeff Weiner', correct: false },
-            {text: 'Reid Hoffman', correct: true},
-            {text: 'James Chuong', correct: false},
-            {text: 'Michelle Yee', correct: false}
+            {text: '2002', correct: false },
+            {text: '2003', correct: false},
+            {text: '2004', correct: false},
+            {text: '2005', correct: true}
         ]
     },
     {
-        question: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+        question: 'This company is the largest Smartphone maker in South Korea?',
         answer: [
-            {text: 'Jeff Weiner', correct: false },
-            {text: 'Reid Hoffman', correct: true},
-            {text: 'James Chuong', correct: false},
-            {text: 'Michelle Yee', correct: false}
+            {text: 'LG', correct: false },
+            {text: 'Samsung', correct: true},
+            {text: 'Honor', correct: false},
+            {text: 'Huawei', correct: false}
         ]
     },
     {
-        question: 'wLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  19?',
+        question: 'This company got its start by selling books online?',
         answer: [
-            {text: 'Jeff Weiner', correct: false },
-            {text: 'Reid Hoffman', correct: true},
-            {text: 'James Chuong', correct: false},
-            {text: 'Michelle Yee', correct: false}
+            {text: 'Ebay', correct: false },
+            {text: 'Argos', correct: false},
+            {text: 'Amazon', correct: true},
+            {text: 'Toshiba', correct: false}
         ]
     },
     {
-        question: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  20',
+        question: 'The first product of this company was a rice cooker?',
         answer: [
-            {text: 'Jeff Weiner', correct: false },
-            {text: 'Reid Hoffman', correct: true},
-            {text: 'James Chuong', correct: false},
-            {text: 'Michelle Yee', correct: false}
+            {text: 'Sony', correct: true },
+            {text: 'Kitchen Aid', correct: false},
+            {text: 'LG', correct: false},
+            {text: 'Huawei', correct: false}
         ]
     }
 ]
