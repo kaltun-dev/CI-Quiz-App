@@ -1,6 +1,6 @@
 problems and bugs
 problem one 
-array sytaz was wrong and it was returning 250 errors 
+array sytax was wrong and it was returning 250 errors 
 fix: fixed array sysntax problem, it was missing = operator at the begining"
 
 
@@ -17,3 +17,15 @@ answerbuttons and overflowing the center div container.
 
 solution
 styled new buttons, made body wider vh, increased container width and height and styled bottons with with flex column direction
+
+problem 3
+score wasnt showing
+score wasnt displaying correct score
+
+
+
+problem 3 
+input button was still displaying after re-start
+
+
+
