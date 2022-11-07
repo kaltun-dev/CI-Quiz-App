@@ -47,14 +47,14 @@ hardLevel.addEventListener('click', startGame)
 
 // different levels
 function levels () {
- if (easyLevel){
+    if (easyLevel){
             // easy10 = questions.slice(0,9);
             shuffledQuestions = questions.sort(() => Math.random() - .5).slice(0,10)
             console.log(easyLevel)
-        } else if (mediumLevel) {
+    } else if (mediumLevel) {
             // medium15 = questions.slice(0,14);
             shuffledQuestions = questions.sort(() => Math.random() - .5).slice(0,15)
-        } else if (hardLevel) {
+    } else if (hardLevel) {
              // hard20 = questions.slice(0,19);
              shuffledQuestions = questions.sort(() => Math.random() - .5).slice(0,20)
         }
