@@ -17,7 +17,7 @@ let myName = document.getElementById('myName')
 let myButton = document.getElementById('myButton')
 const myLabel = document.getElementById('myLabel')
 const form = document.getElementById('form')
-const endContainer = document.getElementById('end-container')
+
 
 
 
@@ -39,15 +39,17 @@ function initial () {
     playAgain.classList.add('hide')
     rulesDiv.classList.add('hide')
     form.classList.add('hide')
-    endContainer.classList.add('hide')
+    
     
     
 }
 
 //event listener for different levels and the next button
-easyLevel.addEventListener('click', startGame, function() {
-    rounds = Number(button.dataset.rounds);
-    shuffledQuestions.length = 10;
+easyLevel.addEventListener('click', function() {
+    // rounds = Number(button.dataset.rounds);
+    // shuffledQuestions.length = 10;
+    startGame();
+     easyLevel = questions.slice(0,9);
 })
 mediumLevel.addEventListener('click', startGame, function() {
     shuffledQuestions.length = 15;
@@ -72,7 +74,6 @@ function startGame() {
     easyLevel.classList.add('hide')
     mediumLevel.classList.add('hide')
     hardLevel.classList.add('hide')
-    endContainer.classList.add('hide')
     myLabel.classList.add('hide')
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
@@ -133,7 +134,6 @@ function selectAnswer(e){
         nextButton.classList.remove('hide')
     } else { // else end the game and show the score after name input
         questionsContainerElement.classList.add('hide')
-        endContainer.classList.remove('hide')
         form.classList.remove('hide')
         myLabel.classList.remove('hide')
         myName.classList.remove('hide')
