@@ -7,6 +7,7 @@ const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 const quizRules = document.getElementById('quiz-rules')
 const easyLevel = document.getElementById('easy')
+const mediumLevel = document.getElementById('medium')
 const hardLevel = document.getElementById('hard')
 let finishText = document.getElementById('finish-text-score')
 const playAgain = document.getElementById('play-again-btn')
@@ -21,6 +22,7 @@ const form = document.getElementById('form')
 
 let shuffledQuestions, currentQuestionIndex
 let score;
+let rounds;
 
 //initial setting for the quiz
 function initial () {
@@ -30,6 +32,7 @@ function initial () {
     // startButton.classList.remove('hide')
     quizRules.classList.remove('hide')
     easyLevel.classList.remove('hide')
+    mediumLevel.classList.remove('hide')
     hardLevel.classList.remove('hide')
     finishText.classList.add('hide')
     playAgain.classList.add('hide')
@@ -39,10 +42,19 @@ function initial () {
     
 }
 
-//event listener for start button and next button
-// startButton.addEventListener('click', startGame)
-easyLevel.addEventListener('click', startGame)
-hardLevel.addEventListener('click', startGame)
+//event listener for different levels and the next button
+easyLevel.addEventListener('click', startGame, function() {
+    rounds = Number(button.dataset.rounds);
+    shuffledQuestions.length = 10;
+})
+mediumLevel.addEventListener('click', startGame, function() {
+    shuffledQuestions.length = 15;
+    rounds = Number(button.dataset.rounds);
+})
+hardLevel.addEventListener('click', startGame, function() {
+    shuffledQuestions.length = 20;
+    rounds = Number(button.dataset.rounds);
+})
 
 
 //show current question, increment and set next question
@@ -56,6 +68,7 @@ function startGame() {
     // startButton.classList.add('hide')
     quizRules.classList.add('hide')
     easyLevel.classList.add('hide')
+    mediumLevel.classList.add('hide')
     hardLevel.classList.add('hide')
     myLabel.classList.add('hide')
     shuffledQuestions = questions.sort(() => Math.random() - .5)
@@ -134,17 +147,11 @@ function selectAnswer(e){
                 document.getElementById('finish-text-score').innerHTML = `Please type your name`;
             }
     })
-        // finishText.classList.remove('hide');
-        // document.getElementById('finish-text-score').innerHTML = `Congratulations on finishing the game ${inputName} ${submitName}. You have scored ${score}/ ${questions.length}`;
-        // playAgain.classList.remove('hide')
+        
     
   }
 }
 
-// finishText.classList.remove('hide');
-//         document.getElementById('finish-text-score').innerHTML = `Congratulations on finishing the game ${inputName} ${submitName}. You have scored ${score}/ ${questions.length}`;
-//         playAgain.classList.remove('hide')
-    
 
 //play again resets game to initial setting
 playAgain.addEventListener('click', function() {
@@ -155,10 +162,11 @@ initial()
 
 // pop up card for quiz rules with close button
 quizRules.addEventListener('click', function() {
-    startButton.classList.add('hide')
+    // startButton.classList.add('hide')
     quizRules.classList.add('hide')
     easyLevel.classList.add('hide')
     hardLevel.classList.add('hide')
+    mediumLevel.classList.add('hide')
     questionsContainerElement.classList.add('hide')
     rulesDiv.classList.remove('hide')
     closeBtn.addEventListener('click', initial)
@@ -271,6 +279,96 @@ const questions = [
             {text: 'Germany', correct: false},
             {text: 'Sweden', correct: false},
             {text: 'USA', correct: false}
+        ]
+    },
+    {
+        question: 'who lora ibmsum dokam lara intel 11?',
+        answer: [
+            {text: 'Jeff Weiner', correct: false },
+            {text: 'Reid Hoffman', correct: true},
+            {text: 'James Chuong', correct: false},
+            {text: 'Michelle Yee', correct: false}
+        ]
+    },
+    {
+        question: 'who lora ibmsum dokam lara intel 12',
+        answer: [
+            {text: 'Jeff Weiner', correct: false },
+            {text: 'Reid Hoffman', correct: true},
+            {text: 'James Chuong', correct: false},
+            {text: 'Michelle Yee', correct: false}
+        ]
+    },
+    {
+        question: 'who lora ibmsum dokam lara intel 13',
+        answer: [
+            {text: 'Jeff Weiner', correct: false },
+            {text: 'Reid Hoffman', correct: true},
+            {text: 'James Chuong', correct: false},
+            {text: 'Michelle Yee', correct: false}
+        ]
+    },
+    {
+        question: 'who lora ibmsum dokam lara intel 14?',
+        answer: [
+            {text: 'Jeff Weiner', correct: false },
+            {text: 'Reid Hoffman', correct: true},
+            {text: 'James Chuong', correct: false},
+            {text: 'Michelle Yee', correct: false}
+        ]
+    },
+    {
+        question: 'who lora ibsum dokam lara intel 15?',
+        answer: [
+            {text: 'Jeff Weiner', correct: false },
+            {text: 'Reid Hoffman', correct: true},
+            {text: 'James Chuong', correct: false},
+            {text: 'Michelle Yee', correct: false}
+        ]
+    },
+    {
+        question: 'who lora ibsum dokam lara intel 16',
+        answer: [
+            {text: 'Jeff Weiner', correct: false },
+            {text: 'Reid Hoffman', correct: true},
+            {text: 'James Chuong', correct: false},
+            {text: 'Michelle Yee', correct: false}
+        ]
+    },
+    {
+        question: 'who lora ibsum dokam lara intel 17?',
+        answer: [
+            {text: 'Jeff Weiner', correct: false },
+            {text: 'Reid Hoffman', correct: true},
+            {text: 'James Chuong', correct: false},
+            {text: 'Michelle Yee', correct: false}
+        ]
+    },
+    {
+        question: 'who lora ibsum dokam lara intel 18',
+        answer: [
+            {text: 'Jeff Weiner', correct: false },
+            {text: 'Reid Hoffman', correct: true},
+            {text: 'James Chuong', correct: false},
+            {text: 'Michelle Yee', correct: false}
+        ]
+    },
+    {
+        question: 'who lora ibsum dokam lara intel 19?',
+        answer: [
+            {text: 'Jeff Weiner', correct: false },
+            {text: 'Reid Hoffman', correct: true},
+            {text: 'James Chuong', correct: false},
+            {text: 'Michelle Yee', correct: false}
+        ]
+    },
+    {
+        question: 'who lora ibsum dokam lara intel 20',
+        answer: [
+            {text: 'Jeff Weiner', correct: false },
+            {text: 'Reid Hoffman', correct: true},
+            {text: 'James Chuong', correct: false},
+            {text: 'Michelle Yee', correct: false}
         ]
     }
 ]
