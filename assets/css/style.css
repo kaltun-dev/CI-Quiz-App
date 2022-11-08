@@ -126,7 +126,7 @@ padding-bottom: 20px;
 }
 .btn:hover {
     box-shadow: 0 0 10px 2px;
-    /* border: #2c2c2c; */
+   
 }
 
 .btn.correct {
