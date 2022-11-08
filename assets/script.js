@@ -6,9 +6,9 @@ const questionsContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 const quizRules = document.getElementById('quiz-rules')
-const easyLevel = document.getElementById('easy')
-const mediumLevel = document.getElementById('medium')
-const hardLevel = document.getElementById('hard')
+let easyLevel = document.getElementById('easy')
+let mediumLevel = document.getElementById('medium')
+let hardLevel = document.getElementById('hard')
 let finishText = document.getElementById('finish-text-score')
 const playAgain = document.getElementById('play-again-btn')
 const rulesDiv = document.getElementById('rules-div')
@@ -48,7 +48,7 @@ hardLevel.addEventListener('click', startGame)
 // different levels
 function levels () {
     if (easyLevel){
-            shuffledQuestions = questions.sort(() => Math.random() - .5).slice(0,10)
+        shuffledQuestions = questions.sort(() => Math.random() - .5).slice(0,15)
 
     } else if (mediumLevel) {
             shuffledQuestions = questions.sort(() => Math.random() - .5).slice(0,15)
@@ -57,13 +57,6 @@ function levels () {
              shuffledQuestions = questions.sort(() => Math.random() - .5).slice(0,20)
         }
         }
-
-
-//when next button is clicked: show current question + 1, increment and set next question
-nextButton.addEventListener('click', () => {
-    currentQuestionIndex++
-    setNextQuestion()
-})
 
 //what to do when quiz starts
 function startGame() {
@@ -74,15 +67,19 @@ function startGame() {
     hardLevel.classList.add('hide')
     myLabel.classList.add('hide')
     levels();
-    // shuffledQuestions = questions.sort(() => Math.random() - .5)
+    shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionsContainerElement.classList.remove('hide')
     score = 0;
     setNextQuestion()
-    
-
-   
 }
+
+//when next button is clicked: show current question + 1, increment and set next question
+nextButton.addEventListener('click', () => {
+    currentQuestionIndex++
+    setNextQuestion()
+})
+
 // what to do for next question
 function setNextQuestion() {
     resetState()
