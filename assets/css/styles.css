@@ -1,25 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Lora&display=swap');
 
+/* font family for everything */
 html {
-    /* background-color: orange; */
     font-family:'Lora', 'Cormorant Garamond', serif;
-
-    
 }
-    
+    /* style for body including background image */
 body {
     padding: 0;
     margin: 0;
     width: 100%;
     height: 100%; 
-    background-image: url("/assets/images/big-tech.jpg");
+    background-image: url("./assets/images/big-tech.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-image: rgba(0, 0, 0, 0.475);
-    
 }
 
-
+/* a link styling to remove defoult style */
 a {
     color: #ffffff;
     text-decoration: none;
@@ -28,10 +25,11 @@ a {
     font-size: 100%;
     margin-top: 30px;
     margin-bottom: 30px;
-    
 }
+
+/* to style the home title for quiz */
 #title {
-    color: #ffffff;
+    color: orange;
     text-align: center;
     font-size: 200%;
     text-decoration: none;
@@ -43,71 +41,60 @@ a {
     margin:  30px auto 30px auto;
     border-radius: 10px;
 }
+
+/* when correct button is pressed */
 .container.correct {
     background-color: lightgreen;
 }
 .container.wrong {
     background-color: red;
 }
+
+/* main div that contains buttons and quiz */
 .container {
-    /* width:800px;
-    max-height: 80%; */
     background-color: #211e1ee5;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
     color: #ffffff;
-    /* width: 250px;
-    height: 250px; */
     margin: auto;
     width: 380px;
     height: 350px;
-     /* display: flex;
-    justify-content:center;
-    align-items: center;
-    flex-direction: column; */
-    
 }
+
+/* container that contains score and input form */
 #end-container {
-    /* display: flex;
-    justify-content: center;
-    flex-direction: column; */
-    /* display: block; */
     font-size: 1.5 rem;
     padding: 10px 20px;
     margin: 10px;
-    /* background-color: #211e1ee5; */
     color: #ffffff;
 }
 
+/* form styling */
 #form {
     text-align: center;
     margin: auto;
     border-radius: 10px;
 }
 
+/*  to make all buttons flex */
 .btn-flex {
-
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 15px;
     margin: 5px auto;
     flex-direction: column;
-    
-    
-    
 }
-/* .question-container {
-display: flex;
-flex-direction: column;
-} */
 
+/* the actual question styling */
 #question {
 text-align: center;
 font-size: 20px;
 padding-bottom: 20px;
 }
+
+/* general rules for all buttons */
 .btn {
     background-color: #000000;
     color: #ffffff;
@@ -116,19 +103,18 @@ padding-bottom: 20px;
     margin: 5px;
     outline: none;
     margin-left: 30px;
-    /* align-items: center; */
     justify-content: center;
     width: 70%;
-    height: 10%;
-    
-    
-    
+    height: 10%;  
 }
+
+/* when btn is hovered  */
 .btn:hover {
     box-shadow: 0 0 10px 2px;
    
 }
 
+/* when btn is correct */
 .btn.correct {
     background-color: lightgreen;
 }
@@ -137,38 +123,31 @@ padding-bottom: 20px;
 background-color: red;
 }
 
-/* .start-btn, .next-btn {
-font-size: 1.5 rem;
-font-weight: bold;
-padding: 10px 20px;
-} */
-
+/* special stylig for next button */
 .next-btn {
 margin: auto;
 width: 50%;
 }
 
-
+/* buttons on main page */
 .controls {
-
     display: flex;
-    /* align-items: center; */
     justify-content: center;
     flex-direction: column;
     font-size: 1.5 rem;
     font-weight: bold;
     padding: 10px 20px;
     margin: 10px;
-    
-   
 }
 
+/* popup rules div */
 #rules-div {
     text-align: center;
     font-size: 15px;
     color: #ffffff;
 }
 
+/* for all buttons that needs to hide at specific situations */
 .hide {
     display: none
 }
