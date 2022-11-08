@@ -20,7 +20,7 @@ const form = document.getElementById('form')
 
 
 
-
+// global variables
 let shuffledQuestions;
 let currentQuestionIndex;
 let score;
@@ -59,7 +59,7 @@ function levels () {
         }
 
 
-//when next buttin is clicked: show current question + 1, increment and set next question
+//when next button is clicked: show current question + 1, increment and set next question
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     setNextQuestion()
@@ -162,9 +162,21 @@ function selectAnswer(e){
 //play again resets game to initial setting
 playAgain.addEventListener('click', function() {
 initial()
-
-
 })
+
+//initial setting for the play again quiz
+function initial () {
+    questionsContainerElement.classList.add('hide')
+    score = 0
+    quizRules.classList.remove('hide')
+    easyLevel.classList.remove('hide')
+    mediumLevel.classList.remove('hide')
+    hardLevel.classList.remove('hide')
+    finishText.classList.add('hide')
+    playAgain.classList.add('hide')
+    rulesDiv.classList.add('hide')
+    form.classList.add('hide')
+}
 
 // pop up card for quiz rules with close button
 quizRules.addEventListener('click', function() {
