@@ -26,45 +26,42 @@
                 <button class="btn">answer 3</button>
             </div>
         </div>
-        <!-- starting level buttons container div -->
-        <div class="controls btn-flex">
-           <button id="quiz-rules" class="btn hide" >How to play</button>
-           <button id="easy" class= "btn hide">Easy</button>
-           <button id="medium" class= "btn hide">Medium</button>
-           <button id="hard" class="btn hide">Hard</button>
-           
-           <!-- <button id="start-btn" class="start-btn btn">Play</button>  -->
-           <button id="next-btn" class="next-btn btn hide" >Next</button>
-        </div>
+       <!-- starting level buttons container div -->
+       <div class="controls btn-flex">
+        <button id="quiz-rules" class="btn" >Instructions</button>
+        <form id="form">
+         <label for="fname"  id="myLabel" >Enter your name:</label><br>
+         <input  type="text" id="myName" name="fname" ><br>
+         <button type="button" id="myButton" class="btn">Submit</button>
+     </form>
+        <button id="start-btn" class="start-btn btn hide">Play</button> 
+        <button id="next-btn" class="next-btn btn hide" >Next</button>
+     </div>
 
-         <!-- pop up rules card container div -->
-         <div id="rules-div" class="hide">
-            <h4>quiz Rules</h4>
-            <p>
-            <ul>
-                <li> Each correct Answer is worth 1 point.</li>
-                <li> It's required to select an answer to move on to the next question.</li>
-                <li> Choose from Easy, Medium and Hard levels.</li>
-                <li> Each level hard different amount of questions</li>
-                <li> See your score and play again..</li>
-            </ul>
-            </p>
-            <button id="close-btn" class="btn">Close</button>
-        </div>
+      <!-- pop up rules card container div -->
+      <div id="rules-div" class="hide">
+         <h4>Instructions</h4>
+         <p>
+         <ul>
+             <li> Each correct Answer is worth 1 point.</li>
+             <li> It's required to select an answer to move on to the next question.</li>
+             <li> Once an aswer is selected, the correct answer will turn green.</li>
+             <li> Answer all 20 questions to see your score</li>
+             <li> See your score and play again..</li>
+         </ul>
+         </p>
+         <button id="close-btn" class="btn">Close</button>
+     </div>
 
-           <!-- end of quiz container -->
-        <div id="end-container" >
-            <form id="form" class="hide">
-                <label for="fname"  id="myLabel" class="hide">Enter your name:</label><br>
-                <input  type="text" id="myName" name="fname" class="hide"><br>
-                <button type="button" id="myButton" class=" btn hide">Submit</button>
-            </form>
-            <p id="finish-text-score" class="hide"> Congratulations on finishing the quiz. you have scored </p>
-           <button id="play-again-btn" class="btn hide" >Play Again</button>
-        </div>
+        <!-- end of quiz container -->
+     <div id="end-container" >
+         <!-- <form id="form" class="hide">
+             <label for="fname"  id="myLabel" class="hide">Enter your name:</label><br>
+             <input  type="text" id="myName" name="fname" class="hide"><br>
+             <button type="button" id="myButton" class=" btn hide">Submit</button>
+         </form> -->
+         <p id="finish-text-score" class="hide"> Congratulations on finishing the quiz. you have scored </p>
+        <button id="play-again-btn" class="btn hide" >Play Again</button>
+     </div>
 
-    </div>
-
-    <script src="assets/script.js"></script>
-</body>
-</html>
+ </div>
