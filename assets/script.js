@@ -184,7 +184,7 @@ let questions = [
 // global variables
 // const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
-const questionsContainerElement = document.getElementById('question-container')
+let questionsContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 const quizRules = document.getElementById('quiz-rules')
@@ -234,7 +234,7 @@ hardLevel.addEventListener('click', hard20)
 
 // reset evebt listener
 //play again resets game to initial setting
-playAgain.addEventListener('click', initial)
+// playAgain.addEventListener('click', initial)
 
 // different levels
 // function levels () {
@@ -253,15 +253,16 @@ playAgain.addEventListener('click', initial)
 function startGame() {
     // startButton.classList.add('hide')
     console.log(shuffledQuestions.length)
-    quizRules.classList.add('hide')
-    easyLevel.classList.add('hide')
-    mediumLevel.classList.add('hide')
-    hardLevel.classList.add('hide')
+    questionsContainerElement.classList.add('hide')
+    quizRules.classList.remove('hide')
+    easyLevel.classList.remove('hide')
+    mediumLevel.classList.remove('hide')
+    hardLevel.classList.remove('hide')
     myLabel.classList.add('hide')
     // levels();
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
-    questionsContainerElement.classList.remove('hide')
+    
     score = 0;
     setNextQuestion()
 }
@@ -368,10 +369,11 @@ function selectAnswer(e){
 //     form.classList.add('hide')
 // }
 
-
+//play again resets game to initial setting
+playAgain.addEventListener('click', initial)
 
 function initial () {
-    questionsContainerElement.classList.add('hide')
+    questionsContainerElement.classList.remove('hide')
     score = 0
     quizRules.classList.remove('hide')
     easyLevel.classList.remove('hide')
@@ -382,13 +384,6 @@ function initial () {
     rulesDiv.classList.add('hide')
     form.classList.add('hide')
 }
-
-//play again resets game to initial setting
-playAgain.addEventListener('click', function() {
-    initial()
-})
-
-
 
 
 // pop up card for quiz rules with close button
