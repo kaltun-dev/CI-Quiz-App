@@ -1,5 +1,4 @@
-
-
+// questions object array.
 let questions = [
     {
         question: 'Who founded LinkedIn?',
@@ -205,8 +204,6 @@ let shuffledQuestions;
 let currentQuestionIndex;
 let score;
 
-// score holder above questions
-
 // pop up card for quiz instructions/how to play
 quizRules.addEventListener('click', function() {
     quizRules.classList.add('hide');
@@ -257,7 +254,6 @@ nextButton.addEventListener('click', () => {
 function setNextQuestion() {
     resetState();
     showQuestion(shuffledQuestions[currentQuestionIndex]);
-
 }
     
 // for-loops the questions object and determins the correct answer from boolean correct: true.
@@ -335,7 +331,7 @@ playAgain.addEventListener('click', function() {
 reset();
 });
 
-//initial setting for the play again quiz
+//initial/reset setting for the playagain  quiz
 function reset () {
     questionsContainerElement.classList.add('hide');
     score = 0;
@@ -348,7 +344,6 @@ function reset () {
     myButton.classList.remove('hide');
     myLabel.classList.remove('hide');
 }
-
 
 //adds class correct to style so color can change
 function setStatusClass(element, correct) {
