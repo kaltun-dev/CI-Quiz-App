@@ -182,7 +182,7 @@ let questions = [
             {text: 'Huawei', correct: false}
         ]
     }
-]
+];
 // getting elements from the DOM
 let startButton = document.getElementById('start-btn');
 let nextButton = document.getElementById('next-btn');
@@ -211,7 +211,7 @@ quizRules.addEventListener('click', function() {
     rulesDiv.classList.remove('hide');
     closeBtn.addEventListener('click', reset);
     console.log(quizRules);
-})
+});
 
 myButton.addEventListener('click', function () {
     myName = document.getElementById('myName').value;
@@ -223,10 +223,10 @@ myButton.addEventListener('click', function () {
         finishText.classList.remove('hide');
         document.getElementById('finish-text-score').innerHTML = `OOPS, you didn't type your name. Please type and then press submit.`;
     }
-})
+});
 
 // play button event listener
-startButton.addEventListener('click', startGame)
+startButton.addEventListener('click', startGame);
 
 //what to do when play is pressed.
 function startGame() {
@@ -247,7 +247,7 @@ function startGame() {
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
     setNextQuestion();
-})
+});
 
 // what to do for next question
 function setNextQuestion() {
@@ -270,7 +270,7 @@ function showQuestion(question) {
        
         } 
        
-    })
+    });
 }
 
 //clears the buttons for next question
@@ -278,8 +278,7 @@ function resetState(){
     clearStatusClass(document.body);
     nextButton.classList.add('hide');
     while (answerButtonsElement.firstChild) {
-        answerButtonsElement.removeChild;
-        (answerButtonsElement.firstChild);
+    answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }
     
 }
@@ -293,7 +292,7 @@ function selectAnswer(e){
     setStatusClass(document.body,correct);
     Array.from(answerButtonsElement.children).forEach(button => {
     setStatusClass(button, button.dataset.correct);
-    })
+    });
 
     // if there are questions left then show next button 
     if (shuffledQuestions.length > currentQuestionIndex + 1 ) {
@@ -325,7 +324,7 @@ function selectAnswer(e){
 //play again resets game to initial setting
 playAgain.addEventListener('click', function() {
 reset();
-})
+});
 
 //initial setting for the play again quiz
 function reset () {
