@@ -194,13 +194,15 @@ const quizRules = document.getElementById('quiz-rules')
 // let mediumLevel = document.getElementById('medium')
 // let hardLevel = document.getElementById('hard')
 let finishText = document.getElementById('finish-text-score')
-let playAgain = document.getElementById('play-again-btn')
-let rulesDiv = document.getElementById('rules-div')
-let closeBtn = document.getElementById('close-btn')
+const playAgain = document.getElementById('play-again-btn')
+const rulesDiv = document.getElementById('rules-div')
+const closeBtn = document.getElementById('close-btn')
 // let myName = document.getElementById('myName')
 let myButton = document.getElementById('myButton')
 let myLabel = document.getElementById('myLabel')
 let form = document.getElementById('form')
+let myName = document.getElementById('myName')
+
 
 
 
