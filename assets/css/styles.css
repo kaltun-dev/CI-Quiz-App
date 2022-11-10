@@ -10,10 +10,9 @@ body {
     margin: 0;
     width: 100%;
     height: 100%; 
-    /* background-image: url("../images/big-tech.jpg");
+    background-image: url("../images/big-tech.jpg");
     background-size: cover;
-    background-repeat: no-repeat; */
-    /* background-image: rgba(0, 0, 0, 0.475); */
+    background-repeat: no-repeat;
 }
 
 /* a link styling to remove defoult style */
@@ -38,7 +37,8 @@ a {
     width: 100%;
     height: 60px;
     margin-bottom: 60px;
-    padding-top: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 /* when correct button is pressed */
@@ -75,13 +75,13 @@ a {
     text-align: center;
     margin: auto;
     border-radius: 10px;
-    /* background-color: hsl(0, 0%, 0%); */
     color: #000000;
     margin-top: 30px;
     margin-bottom: 30px;
     border-radius: 20px;
     border: solid #000000;
     width: 200px;
+    height: 100px;
     align-items: center;
 }
 #myName {
@@ -89,12 +89,17 @@ a {
     width: 90px;
     border-radius: 8px;
 }
+
+#myButton {
+    margin-top: 10px;
+}
 /* style to the writing at end and at begening. */
 #finish-text-score {
     text-align: center;
     font-size: 15px;
-    margin: auto;
+    margin-left: 45px;
     font-weight: bold;
+    padding-bottom: 20px;
 }
 
 #above-score {
@@ -130,13 +135,18 @@ padding-bottom: 20px;
     background-color: #000000;
     color: #ffffff;
     border-radius: 8px;
-    padding: 5px 10px;
-    margin: 5px;
+    padding: 10px 10px;
+    /* margin: 5px; */
     outline: none;
-    margin-left: 30px;
+    /* margin-left: 30px; */
+    margin: auto;
     justify-content: center;
     width: 70%;
     height: 10%;  
+}
+
+#play-again-btn {
+    margin: auto;
 }
 
 /* when btn is hovered  */
@@ -177,6 +187,11 @@ width: 50%;
     font-size: 15px;
     color: #000000;
     font-weight: bold;
+}
+
+#rules-div li {
+    list-style: none;
+    padding: 5px;
 }
 
 /* for all buttons that needs to hide at specific situations */
