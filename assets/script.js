@@ -228,23 +228,24 @@ myButton.addEventListener('click', function () {
     myName = document.getElementById('myName').value
     if (myName) {
         startButton.classList.remove('hide')
-    } else {
-        finishText.classList.remove('hide');
-        document.getElementById('finish-text-score').innerHTML = `oops, you didn't type your name, please type and then press submit`;
+
     }
+    // } else {
+    //     finishText.classList.remove('hide');
+    //     document.getElementById('finish-text-score').innerHTML = `oops, you didn't type your name. Please type and then press submit.`;
+    // }
 })
 
 // play button event listener
 startButton.addEventListener('click', startGame)
 //what to do when quiz starts
 function startGame() {
-    finishText.classList.remove('hide');
+    finishText.classList.add('hide');
     startButton.classList.add('hide')
     quizRules.classList.add('hide')
     myButton.classList.add('hide')
     myLabel.classList.add('hide')
     form.classList.add('hide')
-    myName.classList.add('hide')
     questionsContainerElement.classList.remove('hide')
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
@@ -304,7 +305,7 @@ function selectAnswer(e){
     if (correct) score++;
     setStatusClass(document.body,correct)
     Array.from(answerButtonsElement.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct)
+    setStatusClass(button, button.dataset.correct)
     })
 
     // if there are questions left then show next button 
@@ -312,14 +313,27 @@ function selectAnswer(e){
         nextButton.classList.remove('hide')
     } else { // else end the game and show the score after name input
         questionsContainerElement.classList.add('hide')
-        finishText.classList.remove('hide');
-        document.getElementById('finish-text-score').innerHTML = `Thank you for taking part of the quiz ${myName}. You have scored ${score}/ ${questions.length}`;
-         playAgain.classList.remove('hide')  
+        if (score >= 15) {
+            finishText.classList.remove('hide');
+            document.getElementById('finish-text-score').innerHTML = `Wow, your knowledge of tech comapanies is AMAZING ${myName}. You have scored ${score}/ ${questions.length}. Thank you for playing This Quiz.`;
+            playAgain.classList.remove('hide')
+        } else if (score > 10 && score < 15 ) {
+            finishText.classList.remove('hide');
+            document.getElementById('finish-text-score').innerHTML = `Amazing work ${myName}. You're on a roll. You have scored ${score}/ ${questions.length}. Thank you for playing This Quiz`;
+            playAgain.classList.remove('hide')
+        } else if (score > 5 && score < 10 ) {
+            finishText.classList.remove('hide');
+            document.getElementById('finish-text-score').innerHTML = `Good effort ${myName}. You are getting there. You have scored ${score}/ ${questions.length}. Thank you for playing This Quiz`;
+            playAgain.classList.remove('hide')
+        } else {
+            finishText.classList.remove('hide');
+            document.getElementById('finish-text-score').innerHTML = `Good try ${myName}. It's all about trying. Better luck next time. You have scored ${score}/ ${questions.length}. Thank you for playing This Quiz`;
+            playAgain.classList.remove('hide')
+          
     }
         
   }
-
-
+}
 
 //play again resets game to initial setting
 playAgain.addEventListener('click', function() {
@@ -335,6 +349,8 @@ function reset () {
     playAgain.classList.add('hide')
     rulesDiv.classList.add('hide')
     form.classList.remove('hide')
+    myButton.classList.remove('hide')
+    myLabel.classList.remove('hide')
 }
 
 
