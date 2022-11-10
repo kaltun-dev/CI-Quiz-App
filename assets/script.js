@@ -293,7 +293,7 @@ function selectAnswer(e){
     const correct = selectedButton.dataset.correct;
 
     if (correct) score++;
-    aboveScore.textContent = `${score} / 20.`;
+    aboveScore.textContent = `Score: ${score} / 20.`;
     // document.getElementById('above-score').innerHTML = `${score} / 20.`;
     setStatusClass(document.body,correct);
     Array.from(answerButtonsElement.children).forEach(button => {
@@ -305,6 +305,7 @@ function selectAnswer(e){
         nextButton.classList.remove('hide');
     } else { // else end the game and show the score after name input
         questionsContainerElement.classList.add('hide');
+        aboveScore.classList.add('hide');
         if (score >= 15) {
             finishText.classList.remove('hide');
             document.getElementById('finish-text-score').innerHTML = `Wow, your knowledge of tech comapanies is AMAZING ${myName}. You have scored ${score}/ ${questions.length}. Thank you for playing this Quiz.`;
@@ -338,6 +339,7 @@ reset();
 function reset () {
     questionsContainerElement.classList.add('hide');
     score = 0;
+    aboveScore.classList.add('hide')
     quizRules.classList.remove('hide');
     finishText.classList.add('hide');
     playAgain.classList.add('hide');
