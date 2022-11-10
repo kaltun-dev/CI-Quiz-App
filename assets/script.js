@@ -198,11 +198,14 @@ let myButton = document.getElementById('myButton');
 let myLabel = document.getElementById('myLabel');
 let form = document.getElementById('form');
 let myName = document.getElementById('myName');
+let aboveScore = document.getElementById('above-score');
 
 // global variables
 let shuffledQuestions;
 let currentQuestionIndex;
 let score;
+
+// score holder above questions
 
 // pop up card for quiz instructions/how to play
 quizRules.addEventListener('click', function() {
@@ -241,6 +244,7 @@ function startGame() {
     currentQuestionIndex = 0;
     score = 0;
     setNextQuestion();
+    aboveScore.classList.remove('hide');
 }
 
 //when next button is clicked: show current question + 1, increment and set next question
@@ -289,6 +293,8 @@ function selectAnswer(e){
     const correct = selectedButton.dataset.correct;
 
     if (correct) score++;
+    aboveScore.textContent = `${score} / 20.`;
+    // document.getElementById('above-score').innerHTML = `${score} / 20.`;
     setStatusClass(document.body,correct);
     Array.from(answerButtonsElement.children).forEach(button => {
     setStatusClass(button, button.dataset.correct);
@@ -320,6 +326,8 @@ function selectAnswer(e){
         
   }
 }
+
+// document.getElementById('above-score').innerHTML = `${score} / 20.`;
 
 //play again resets game to initial setting
 playAgain.addEventListener('click', function() {

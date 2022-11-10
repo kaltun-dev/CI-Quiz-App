@@ -52,13 +52,14 @@ a {
 /* main div that contains buttons and quiz */
 .container {
     background-color: #f5a138;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
     color: #000000;
     margin: auto;
     width: 380px;
-    height: 350px;
+    height: 400px;
+    margin-bottom: 80px;
 }
 
 /* container that contains score and input form */
@@ -74,20 +75,38 @@ a {
     text-align: center;
     margin: auto;
     border-radius: 10px;
-    background-color: hsl(0, 0%, 0%);
+    /* background-color: hsl(0, 0%, 0%); */
     color: #000000;
     margin-top: 30px;
     margin-bottom: 30px;
+    border-radius: 20px;
+    border: solid #000000;
+    width: 200px;
+    align-items: center;
 }
 #myName {
     color: #000000;
+    width: 90px;
+    border-radius: 8px;
 }
-
+/* style to the writing at end and at begening. */
 #finish-text-score {
     text-align: center;
     font-size: 15px;
     margin: auto;
     font-weight: bold;
+}
+
+#above-score {
+   width: 40px;
+   height: 20px;
+   background-color: #000000;
+   padding: 5px;
+   margin: 0;
+   border-radius: 40%;
+   color: #ffffff;
+   text-align: center;
+   font-size: 10px;
 }
 /*  to make all buttons flex */
 .btn-flex {
@@ -157,6 +176,7 @@ width: 50%;
     text-align: center;
     font-size: 15px;
     color: #000000;
+    font-weight: bold;
 }
 
 /* for all buttons that needs to hide at specific situations */
