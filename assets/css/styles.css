@@ -34,7 +34,7 @@ a {
     text-decoration: none;
     outline: none;
     font-weight: bolder;
-    background-color: #d1e5e1;
+    background-color: #f5a138;
     width: 100%;
     height: 80px;
     margin-bottom: 60px;
@@ -51,7 +51,7 @@ a {
 
 /* main div that contains buttons and quiz */
 .container {
-    background-color: #d1e5e18c;
+    background-color: #f5a138;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
@@ -63,7 +63,7 @@ a {
 
 /* container that contains score and input form */
 #end-container {
-    font-size: 1.5 rem;
+    font-size: 15px;
     padding: 10px 20px;
     margin: 10px;
     color: #000000;
@@ -74,10 +74,21 @@ a {
     text-align: center;
     margin: auto;
     border-radius: 10px;
-    background-color: #000000;
+    background-color: hsl(0, 0%, 0%);
+    color: #000000;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#myName {
     color: #000000;
 }
 
+#finish-text-score {
+    text-align: center;
+    font-size: 15px;
+    margin: auto;
+    font-weight: bold;
+}
 /*  to make all buttons flex */
 .btn-flex {
     display: flex;

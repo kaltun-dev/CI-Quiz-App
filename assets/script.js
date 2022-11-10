@@ -182,120 +182,107 @@ let questions = [
             {text: 'Huawei', correct: false}
         ]
     }
-]
+];
 // getting elements from the DOM
-let startButton = document.getElementById('start-btn') 
-let nextButton = document.getElementById('next-btn')
-let questionsContainerElement = document.getElementById('question-container')
-let questionElement = document.getElementById('question')
-let answerButtonsElement = document.getElementById('answer-buttons')
-const quizRules = document.getElementById('quiz-rules')
-// let easyLevel = document.getElementById('easy')
-// let mediumLevel = document.getElementById('medium')
-// let hardLevel = document.getElementById('hard')
-let finishText = document.getElementById('finish-text-score')
-const playAgain = document.getElementById('play-again-btn')
-const rulesDiv = document.getElementById('rules-div')
-const closeBtn = document.getElementById('close-btn')
-// let myName = document.getElementById('myName')
-let myButton = document.getElementById('myButton')
-let myLabel = document.getElementById('myLabel')
-let form = document.getElementById('form')
-let myName = document.getElementById('myName')
-
-
-
+let startButton = document.getElementById('start-btn');
+let nextButton = document.getElementById('next-btn');
+let questionsContainerElement = document.getElementById('question-container');
+let questionElement = document.getElementById('question');
+let answerButtonsElement = document.getElementById('answer-buttons');
+const quizRules = document.getElementById('quiz-rules');
+let finishText = document.getElementById('finish-text-score');
+const playAgain = document.getElementById('play-again-btn');
+const rulesDiv = document.getElementById('rules-div');
+const closeBtn = document.getElementById('close-btn');
+let myButton = document.getElementById('myButton');
+let myLabel = document.getElementById('myLabel');
+let form = document.getElementById('form');
+let myName = document.getElementById('myName');
 
 // global variables
 let shuffledQuestions;
 let currentQuestionIndex;
 let score;
 
-
-// pop up card for quiz rules with close button
+// pop up card for quiz instructions/how to play
 quizRules.addEventListener('click', function() {
-    // startButton.classList.add('hide')
-    quizRules.classList.add('hide')
-    form.classList.add('hide')
-    // questionsContainerElement.classList.add('hide')
-    rulesDiv.classList.remove('hide')
-    // closeBtn.classList.remove('hide')
-    closeBtn.addEventListener('click', reset)
-    console.log(quizRules)
-})
+    quizRules.classList.add('hide');
+    form.classList.add('hide');
+    rulesDiv.classList.remove('hide');
+    closeBtn.addEventListener('click', reset);
+    console.log(quizRules);
+});
 
 myButton.addEventListener('click', function () {
-    myName = document.getElementById('myName').value
+    myName = document.getElementById('myName').value;
     if (myName) {
-        startButton.classList.remove('hide')
+        startButton.classList.remove('hide');
+        finishText.classList.add('hide');
 
+    } else {
+        finishText.classList.remove('hide');
+        document.getElementById('finish-text-score').innerHTML = `OOPS, you didn't type your name. Please type and then press submit.`;
     }
-    // } else {
-    //     finishText.classList.remove('hide');
-    //     document.getElementById('finish-text-score').innerHTML = `oops, you didn't type your name. Please type and then press submit.`;
-    // }
-})
+});
 
 // play button event listener
-startButton.addEventListener('click', startGame)
-//what to do when quiz starts
+startButton.addEventListener('click', startGame);
+
+//what to do when play is pressed.
 function startGame() {
     finishText.classList.add('hide');
-    startButton.classList.add('hide')
-    quizRules.classList.add('hide')
-    myButton.classList.add('hide')
-    myLabel.classList.add('hide')
-    form.classList.add('hide')
-    questionsContainerElement.classList.remove('hide')
-    shuffledQuestions = questions.sort(() => Math.random() - .5)
-    currentQuestionIndex = 0
+    startButton.classList.add('hide');
+    quizRules.classList.add('hide');
+    myButton.classList.add('hide');
+    myLabel.classList.add('hide');
+    form.classList.add('hide');
+    questionsContainerElement.classList.remove('hide');
+    shuffledQuestions = questions.sort(() => Math.random() - .5);
+    currentQuestionIndex = 0;
     score = 0;
-    setNextQuestion()
+    setNextQuestion();
 }
 
 //when next button is clicked: show current question + 1, increment and set next question
 nextButton.addEventListener('click', () => {
-    currentQuestionIndex++
-    setNextQuestion()
-})
+    currentQuestionIndex++;
+    setNextQuestion();
+});
 
 // what to do for next question
 function setNextQuestion() {
-    resetState()
-    showQuestion(shuffledQuestions[currentQuestionIndex])
+    resetState();
+    showQuestion(shuffledQuestions[currentQuestionIndex]);
 
-}
+};
     
-
-
-
 // for-loops the questions object and determins the correct answer from boolean correct: true.
 function showQuestion(question) {
-    questionElement.innerText = question.question
+    questionElement.innerText = question.question;
     question.answer.forEach(answer => {
-        const button = document.createElement('button')
-        button.innerText = answer.text
-        button.classList.add('btn')
-        button.addEventListener('click',selectAnswer)
-        answerButtonsElement.appendChild(button)
+        const button = document.createElement('button');
+        button.innerText = answer.text;
+        button.classList.add('btn');
+        button.addEventListener('click',selectAnswer);
+        answerButtonsElement.appendChild(button);
         if ( answer.correct) {
-            button.dataset.correct = true
+            button.dataset.correct = true;
        
         } 
        
-    })
-}
+    });
+};
 
 //clears the buttons for next question
 function resetState(){
-    clearStatusClass(document.body)
-    nextButton.classList.add('hide')
+    clearStatusClass(document.body);
+    nextButton.classList.add('hide');
     while (answerButtonsElement.firstChild) {
-        answerButtonsElement.removeChild
-        (answerButtonsElement.firstChild)
+        answerButtonsElement.removeChild;
+        (answerButtonsElement.firstChild);
     }
     
-}
+};
 
 //selects answer from questions object and increments score if correct
 function selectAnswer(e){
@@ -315,19 +302,19 @@ function selectAnswer(e){
         questionsContainerElement.classList.add('hide')
         if (score >= 15) {
             finishText.classList.remove('hide');
-            document.getElementById('finish-text-score').innerHTML = `Wow, your knowledge of tech comapanies is AMAZING ${myName}. You have scored ${score}/ ${questions.length}. Thank you for playing This Quiz.`;
+            document.getElementById('finish-text-score').innerHTML = `Wow, your knowledge of tech comapanies is AMAZING ${myName}. You have scored ${score}/ ${questions.length}. Thank you for playing this Quiz.`;
             playAgain.classList.remove('hide')
         } else if (score > 10 && score < 15 ) {
             finishText.classList.remove('hide');
-            document.getElementById('finish-text-score').innerHTML = `Amazing work ${myName}. You're on a roll. You have scored ${score}/ ${questions.length}. Thank you for playing This Quiz`;
+            document.getElementById('finish-text-score').innerHTML = `Amazing work ${myName}. You're on a roll. You have scored ${score}/ ${questions.length}. Thank you for playing this Quiz.`;
             playAgain.classList.remove('hide')
         } else if (score > 5 && score < 10 ) {
             finishText.classList.remove('hide');
-            document.getElementById('finish-text-score').innerHTML = `Good effort ${myName}. You are getting there. You have scored ${score}/ ${questions.length}. Thank you for playing This Quiz`;
+            document.getElementById('finish-text-score').innerHTML = `Good effort ${myName}. You are getting there. You have scored ${score}/ ${questions.length}. Thank you for playing this Quiz.`;
             playAgain.classList.remove('hide')
         } else {
             finishText.classList.remove('hide');
-            document.getElementById('finish-text-score').innerHTML = `Good try ${myName}. It's all about trying. Better luck next time. You have scored ${score}/ ${questions.length}. Thank you for playing This Quiz`;
+            document.getElementById('finish-text-score').innerHTML = `Good try ${myName}. It's all about trying. Better luck next time. You have scored ${score}/ ${questions.length}. Thank you for playing this Quiz,`;
             playAgain.classList.remove('hide')
           
     }
