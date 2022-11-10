@@ -1,4 +1,4 @@
-"use strict"
+
 
 let questions = [
     {
@@ -182,7 +182,7 @@ let questions = [
             {text: 'Huawei', correct: false}
         ]
     }
-];
+]
 // getting elements from the DOM
 let startButton = document.getElementById('start-btn');
 let nextButton = document.getElementById('next-btn');
@@ -211,7 +211,7 @@ quizRules.addEventListener('click', function() {
     rulesDiv.classList.remove('hide');
     closeBtn.addEventListener('click', reset);
     console.log(quizRules);
-});
+})
 
 myButton.addEventListener('click', function () {
     myName = document.getElementById('myName').value;
@@ -223,10 +223,10 @@ myButton.addEventListener('click', function () {
         finishText.classList.remove('hide');
         document.getElementById('finish-text-score').innerHTML = `OOPS, you didn't type your name. Please type and then press submit.`;
     }
-});
+})
 
 // play button event listener
-startButton.addEventListener('click', startGame);
+startButton.addEventListener('click', startGame)
 
 //what to do when play is pressed.
 function startGame() {
@@ -247,14 +247,14 @@ function startGame() {
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
     setNextQuestion();
-});
+})
 
 // what to do for next question
 function setNextQuestion() {
     resetState();
     showQuestion(shuffledQuestions[currentQuestionIndex]);
 
-};
+}
     
 // for-loops the questions object and determins the correct answer from boolean correct: true.
 function showQuestion(question) {
@@ -270,8 +270,8 @@ function showQuestion(question) {
        
         } 
        
-    });
-};
+    })
+}
 
 //clears the buttons for next question
 function resetState(){
@@ -282,40 +282,40 @@ function resetState(){
         (answerButtonsElement.firstChild);
     }
     
-};
+}
 
 //selects answer from questions object and increments score if correct
 function selectAnswer(e){
-    const selectedButton = e.target
-    const correct = selectedButton.dataset.correct
+    const selectedButton = e.target;
+    const correct = selectedButton.dataset.correct;
 
     if (correct) score++;
-    setStatusClass(document.body,correct)
+    setStatusClass(document.body,correct);
     Array.from(answerButtonsElement.children).forEach(button => {
-    setStatusClass(button, button.dataset.correct)
+    setStatusClass(button, button.dataset.correct);
     })
 
     // if there are questions left then show next button 
     if (shuffledQuestions.length > currentQuestionIndex + 1 ) {
-        nextButton.classList.remove('hide')
+        nextButton.classList.remove('hide');
     } else { // else end the game and show the score after name input
-        questionsContainerElement.classList.add('hide')
+        questionsContainerElement.classList.add('hide');
         if (score >= 15) {
             finishText.classList.remove('hide');
             document.getElementById('finish-text-score').innerHTML = `Wow, your knowledge of tech comapanies is AMAZING ${myName}. You have scored ${score}/ ${questions.length}. Thank you for playing this Quiz.`;
-            playAgain.classList.remove('hide')
+            playAgain.classList.remove('hide');
         } else if (score > 10 && score < 15 ) {
             finishText.classList.remove('hide');
             document.getElementById('finish-text-score').innerHTML = `Amazing work ${myName}. You're on a roll. You have scored ${score}/ ${questions.length}. Thank you for playing this Quiz.`;
-            playAgain.classList.remove('hide')
+            playAgain.classList.remove('hide');
         } else if (score > 5 && score < 10 ) {
             finishText.classList.remove('hide');
             document.getElementById('finish-text-score').innerHTML = `Good effort ${myName}. You are getting there. You have scored ${score}/ ${questions.length}. Thank you for playing this Quiz.`;
-            playAgain.classList.remove('hide')
+            playAgain.classList.remove('hide');
         } else {
             finishText.classList.remove('hide');
             document.getElementById('finish-text-score').innerHTML = `Good try ${myName}. It's all about trying. Better luck next time. You have scored ${score}/ ${questions.length}. Thank you for playing this Quiz,`;
-            playAgain.classList.remove('hide')
+            playAgain.classList.remove('hide');
           
     }
         
@@ -324,35 +324,35 @@ function selectAnswer(e){
 
 //play again resets game to initial setting
 playAgain.addEventListener('click', function() {
-reset()
+reset();
 })
 
 //initial setting for the play again quiz
 function reset () {
-    questionsContainerElement.classList.add('hide')
-    score = 0
-    quizRules.classList.remove('hide')
-    finishText.classList.add('hide')
-    playAgain.classList.add('hide')
-    rulesDiv.classList.add('hide')
-    form.classList.remove('hide')
-    myButton.classList.remove('hide')
-    myLabel.classList.remove('hide')
+    questionsContainerElement.classList.add('hide');
+    score = 0;
+    quizRules.classList.remove('hide');
+    finishText.classList.add('hide');
+    playAgain.classList.add('hide');
+    rulesDiv.classList.add('hide');
+    form.classList.remove('hide');
+    myButton.classList.remove('hide');
+    myLabel.classList.remove('hide');
 }
 
 
 //adds class correct to style so color can change
 function setStatusClass(element, correct) {
-    clearStatusClass(element)
+    clearStatusClass(element);
     if (correct) {
-        element.classList.add('correct')
+        element.classList.add('correct');
     } else {
-        element.classList.add('wrong')
+        element.classList.add('wrong');
     }
 }
 
 //clears class styling for next question
 function clearStatusClass(element) {
-    element.classList.remove('correct')
-    element.classList.remove('wrong')
+    element.classList.remove('correct');
+    element.classList.remove('wrong');
 }
