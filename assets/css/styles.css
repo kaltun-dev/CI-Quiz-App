@@ -3,15 +3,17 @@
 /* font family for everything */
 html {
     font-family:'Lora', 'Cormorant Garamond', serif;
+    padding: 0;
+    margin: 0;
 }
     /* style for body including background image */
 body {
     padding: 0;
     margin: 0;
-    width: 100%;
-    height: 100%; 
+    /* width: 100%;
+    height: 100%;  */
     background-image: url("../images/big-tech.jpg");
-    background-size: cover;
+    background-size:cover;
     background-repeat: no-repeat;
 }
 
@@ -208,14 +210,12 @@ footer {
 } 
 
 /* list icon styling */
-.footer-icons li {
-    width: 100px;
-    height: 100px;
+.footer-icons {
     list-style: none;
-    display: inline;
-    margin:auto;
-    padding-left: 280px;
-    font-size:20px;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-evenly;
   }
   
   li>a {
@@ -225,8 +225,47 @@ footer {
 
   /* media quearies for responsiveness */
 
-  @media (min-width: 350px) {
+  @media (max-width: 400px) {
+
     #title {
         font-size: 20px;
+        height: 15px
+    }
+    .container {
+        width: 150px;
+        height: 300px; 
+        margin: auto;
+      }
+    #form {
+        width: 120px;
+        height: 90px;
+        margin: auto;
+    }
+
+    .btn {
+        width: 80%;
+        height: 20px;
+        padding-bottom: 10px;
+        padding-bottom: 10px;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    #finish-text-score {
+        font-size: 10px;
+    }
+
+    #rules-div {
+        font-size: 6px;
+    }
+
+    #question {
+        font-size: 14px;
+        text-align: center;
+    }
+    .footer-icons {
+
     }
   }
+
+  
