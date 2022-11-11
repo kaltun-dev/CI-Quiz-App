@@ -10,11 +10,18 @@ html {
 body {
     padding: 0;
     margin: 0;
-    /* width: 100%;
-    height: 100%;  */
+    width: 100%;
+    height: 100%; 
     background-image: url("../images/big-tech.jpg");
     background-size:cover;
     background-repeat: no-repeat;
+    background-color: #f5a138;
+}
+
+/* for stopping white space underneath footer. code from stack overflow*/
+.content {
+    /* padding: 5%; */
+    min-height: 90vh;
 }
 
 /* a link styling to remove defoult style */
@@ -79,7 +86,7 @@ a {
     border-radius: 10px;
     color: #000000;
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     border-radius: 20px;
     border: solid #000000;
     width: 200px;
@@ -100,7 +107,6 @@ a {
 #finish-text-score {
     text-align: center;
     font-size: 15px;
-    /* margin-left: 45px; */
     margin: auto;
     font-weight: bold;
     padding-bottom: 20px;
@@ -193,11 +199,6 @@ width: 50%;
     font-weight: bold;
 }
 
-#rules-div li {
-    list-style: none;
-    padding: 5px;
-}
-
 /* for all buttons that needs to hide at specific situations */
 .hide {
     display: none
@@ -205,8 +206,11 @@ width: 50%;
 
 /* general footer styling */
 footer {
-    height: 30px;
+    /* padding: 5%; */
+    width: 100%;
+    height: 20px;
     background-color: #f5a138;
+
 } 
 
 /* list icon styling */
@@ -232,40 +236,49 @@ footer {
         height: 15px
     }
     .container {
-        width: 180px;
+        width: 200px;
         height: 300px; 
         margin: auto;
       }
-    /* #form {
+    #form {
         width: 120px;
-        height: 90px;
-        margin: auto;
+        height: 120px;
+        margin-bottom: 5px;
+        /* margin: auto; */
     }
 
     .btn {
         width: 80%;
         height: 20px;
-        padding-bottom: 10px;
-        padding-bottom: 10px;
+        padding: 10px;
+        /* padding-bottom: 10px;
+        padding-bottom: 10px; */
         font-size: 10px;
         text-align: center;
     }
 
     #finish-text-score {
         font-size: 10px;
+        margin:0;
     }
 
     #rules-div {
-        font-size: 6px;
+        font-size: 10px;
     }
 
     #question {
         font-size: 14px;
         text-align: center;
     }
-    /* .footer-icons {
+    #myButton {
+        padding: 15px;
+    }
 
-    } */ 
+    #play-again-btn {
+        margin:auto
+    }
+    
+   
   }
 
   
