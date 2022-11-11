@@ -232,11 +232,11 @@ footer {
         height: 15px
     }
     .container {
-        width: 150px;
+        width: 180px;
         height: 300px; 
         margin: auto;
       }
-    #form {
+    /* #form {
         width: 120px;
         height: 90px;
         margin: auto;
@@ -263,9 +263,9 @@ footer {
         font-size: 14px;
         text-align: center;
     }
-    .footer-icons {
+    /* .footer-icons {
 
-    }
+    } */ 
   }
 
   
