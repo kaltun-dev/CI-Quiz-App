@@ -211,6 +211,7 @@ quizRules.addEventListener('click', function() {
     infoFront.classList.add('hide');
     form.classList.add('hide');
     rulesDiv.classList.remove('hide');
+    finishText.classList.add('hide');
     closeBtn.addEventListener('click', reset);
     console.log(quizRules);
 });
