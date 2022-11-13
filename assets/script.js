@@ -241,7 +241,7 @@ function startGame() {
     myLabel.classList.add('hide');
     form.classList.add('hide');
     questionsContainerElement.classList.remove('hide');
-    shuffledQuestions = questions.sort(() => Math.random() - .5);
+    shuffledQuestions = questions.sort(() => Math.random() - 0.5);
     currentQuestionIndex = 0;
     score = 0;
     setNextQuestion();
