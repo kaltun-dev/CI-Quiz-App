@@ -69,7 +69,7 @@ a {
     width: 380px;
     height: 400px;
     margin-bottom: 80px;
-    margin-top: 80px;
+    margin-top: 200px;
 }
 
 /* container that contains score and input form */
@@ -253,16 +253,17 @@ footer {
         height: 15px
     }
     .container {
-        width: 250px;
+        width: 200px;
         height: 380px; 
         margin: auto;
         margin-bottom: 80px;
         margin-top: 80px;
       }
     #form {
-        width: 170px;
+        width: 158px;
         height: 120px;
         margin-bottom: 0;
+        margin-right: 30px;
         
     }
 
