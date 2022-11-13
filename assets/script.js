@@ -198,6 +198,7 @@ let myLabel = document.getElementById('myLabel');
 let form = document.getElementById('form');
 let myName = document.getElementById('myName');
 let aboveScore = document.getElementById('above-score');
+const infoFront = document.getElementById('info');
 
 // global variables
 let shuffledQuestions;
@@ -207,6 +208,7 @@ let score;
 // pop up card for quiz instructions/how to play
 quizRules.addEventListener('click', function() {
     quizRules.classList.add('hide');
+    infoFront.classList.add('hide');
     form.classList.add('hide');
     rulesDiv.classList.remove('hide');
     closeBtn.addEventListener('click', reset);
@@ -231,6 +233,7 @@ startButton.addEventListener('click', startGame);
 //what to do when play is pressed.
 function startGame() {
     finishText.classList.add('hide');
+    infoFront.classList.add('hide');
     startButton.classList.add('hide');
     quizRules.classList.add('hide');
     myButton.classList.add('hide');
@@ -290,7 +293,6 @@ function selectAnswer(e){
 
     if (correct) score++;
     aboveScore.textContent = `Score: ${score} / 20.`;
-    // document.getElementById('above-score').innerHTML = `${score} / 20.`;
     setStatusClass(document.body,correct);
     Array.from(answerButtonsElement.children).forEach(button => {
     setStatusClass(button, button.dataset.correct);
@@ -335,7 +337,7 @@ reset();
 function reset () {
     questionsContainerElement.classList.add('hide');
     score = 0;
-    aboveScore.classList.add('hide')
+    aboveScore.classList.add('hide');
     quizRules.classList.remove('hide');
     finishText.classList.add('hide');
     playAgain.classList.add('hide');
@@ -343,6 +345,7 @@ function reset () {
     form.classList.remove('hide');
     myButton.classList.remove('hide');
     myLabel.classList.remove('hide');
+    infoFront.classList.remove('hide');
 }
 
 //adds class correct to style so color can change
