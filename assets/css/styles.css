@@ -68,7 +68,7 @@ a {
     margin: auto;
     width: 380px;
     height: 400px;
-    margin-bottom: 80px;
+    margin-bottom: 150px;
     margin-top: 200px;
 }
 
@@ -240,8 +240,8 @@ footer {
         width:300px;
         height: 380px; 
         margin: auto;
-        margin-bottom: 80px;
-        margin-top: 80px;
+        margin-bottom: 150px;
+        margin-top: 150px;
     }
   }
 
@@ -256,14 +256,15 @@ footer {
         width: 200px;
         height: 380px; 
         margin: auto;
-        margin-bottom: 80px;
-        margin-top: 80px;
+        margin-bottom: 100px;
+        margin-top: 100px;
       }
     #form {
-        width: 158px;
-        height: 120px;
+        width: 160px;
+        height: 100px;
         margin-bottom: 0;
         margin-right: 30px;
+        font-size: 10px;
         
     }
 
