@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Lora&display=swap');
 
 /* font family for everything */
 html {
-    font-family:'Lora', 'Cormorant Garamond', serif;
+    font-family:'Cormorant Garamond', 'Lora', serif;
     padding: 0;
     margin: 0;
 }
@@ -230,7 +229,7 @@ footer {
 
   /* media quearies for responsiveness */
 
-  @media (max-width: 1025) {
+  @media (max-width: 1025px) {
     #info {
         font-size: 20px;
     }
