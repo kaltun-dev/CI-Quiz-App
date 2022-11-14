@@ -1,4 +1,4 @@
-// questions object array.
+// questions object array. code for this section from webdev simplified.
 let questions = [
     {
         question: 'Who founded LinkedIn?',
@@ -200,9 +200,11 @@ let myName = document.getElementById('myName');
 let aboveScore = document.getElementById('above-score');
 const infoFront = document.getElementById('info');
 
-// global variables
+// global variables these 2 are from code from webdev simplified
 let shuffledQuestions;
 let currentQuestionIndex;
+
+// holds score
 let score;
 
 // pop up card for quiz instructions/how to play
@@ -231,7 +233,7 @@ myButton.addEventListener('click', function () {
 // play button event listener
 startButton.addEventListener('click', startGame);
 
-//what to do when play is pressed.
+//what to do when play is pressed. code inspired from webdev simplified
 function startGame() {
     finishText.classList.add('hide');
     infoFront.classList.add('hide');
@@ -248,19 +250,19 @@ function startGame() {
     aboveScore.classList.remove('hide');
 }
 
-//when next button is clicked: show current question + 1, increment and set next question
+//when next button is clicked: show current question + 1, increment and set next question. code from webdev simplified
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
     setNextQuestion();
 });
 
-// what to do for next question
+// what to do for next question. code from webdev simplified
 function setNextQuestion() {
     resetState();
     showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
     
-// for-loops the questions object and determins the correct answer from boolean correct: true.
+// for-loops the questions object and determins the correct answer from boolean correct: true. some of the is code from webdev simplified
 function showQuestion(question) {
     questionElement.innerText = question.question;
     question.answer.forEach(answer => {
@@ -277,7 +279,7 @@ function showQuestion(question) {
     });
 }
 
-//clears the buttons for next question
+//clears the buttons for next question. code from webdev simplified
 function resetState(){
     clearStatusClass(document.body);
     nextButton.classList.add('hide');
@@ -287,11 +289,11 @@ function resetState(){
     
 }
 
-//selects answer from questions object and increments score if correct
+//selects answer from questions object. code from webdev simplified.
 function selectAnswer(e){
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct;
-
+    // and increments score if correct
     if (correct) score++;
     aboveScore.textContent = `Score: ${score} / 20.`;
     setStatusClass(document.body,correct);
@@ -349,7 +351,7 @@ function reset () {
     infoFront.classList.remove('hide');
 }
 
-//adds class correct to style so color can change
+//adds class correct to style so color can change. code from web dev simplified.
 function setStatusClass(element, correct) {
     clearStatusClass(element);
     if (correct) {
@@ -359,7 +361,7 @@ function setStatusClass(element, correct) {
     }
 }
 
-//clears class styling for next question
+//clears class styling for next question. ode from web dev simplified.
 function clearStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong');

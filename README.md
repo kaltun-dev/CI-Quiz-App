@@ -1,5 +1,5 @@
 
-# Tec Companies Quiz
+# Tech Companies Quiz
 This is a website for a trivia quiz about tech companies. The aim of this website to test the awareness  of the users knowledge of tech comapanies in a engaging way whilst making them aware of facts they might not have known before. This website consists of a landing page and container that contains 20 questions that apear in sucession ending with a score feedback. 
 <img src="assets/images/responsive.png"/>
 
@@ -45,12 +45,12 @@ Wireframes created with Balsamiq. The project was developed from initial wirefra
 
 Balsamic wireframe links for the website.
 
-#### Large screen
+### Large screen
 * [Home page](ithub.com/kaltun-dev/CI-Quiz-App/blob/main/assets/images/wireframe1.png) and [quiz Area](hhttps://github.com/kaltun-dev/CI-Quiz-App/blob/main/assets/images/wireframe3.png)
 <img src="assets/images/wireframe1.png"/>
 <img src="assets/images/wireframe3.png"/>
 
-#### Small screen
+### Small screen
 * [Home page](https://github.com/kaltun-dev/CI-Quiz-App/blob/main/assets/images/wireframe2.png) and [quiz area](https://github.com/kaltun-dev/CI-Quiz-App/blob/main/assets/images/wireframe4.png)
  <img src="assets/images/wireframe2.png"/>
 <img src="assets/images/wireframe4.png"/>
@@ -73,7 +73,7 @@ we've used Cormorant Garamond for the main font, and Lora as a backup font for t
 ### Main home page consisting of four main sections.
 
 <img src="assets/images/quiz-web8.png">
-
+### Bio area
 1. A little bio section for the user that contains a brief four lines of text pertaining to the aim of the quiz.
 <img src="assets/images/quiz-web1.png">
 
@@ -102,7 +102,7 @@ we've used Cormorant Garamond for the main font, and Lora as a backup font for t
 1.At the end of the quiz users will get a personalised text showing their score and preif words of encouragement. Aditionaly there is a restart button, which takes users to the start home page and resets all, name, score and questions.
 <img src="assets/images/quiz-web7.png">
  
-+ Footer area
+### Footer area
 1. Very simple footer section at the bottom of the page which contains 3 social media links. One for twitter, one for linkedin and one for github.
 <img src="assets/images/quiz-web6.png">
 
@@ -158,37 +158,37 @@ Testing on all devices on mozila is good too.
 ## Project Bugs and Solutions:
 No known bugs now. But there were quite few problems at every stage. Whenever a problem was fixed another woud apear. Here are some.
 
-problems and bugs
+Problems and bugs
 
-* problem 1
+* Problem 1
 array sytax was wrong and it was returning 250 errors 
 fix: fixed array sysntax problem, it was missing = operator at the begining"
 
 
-* problem 2
+* Problem 2
 questions werent showing on the questions container.
 fix: I was using getelmentbyid eventhough i didnt use id selctor but a class selector.
 
 
-* problem 3
+* Problem 3
 
 answerbuttons were overflowing the center div container.
 solution: styled new buttons, made body wider vh, increased container width and height and styled bottons with with flex column direction.
 
-* problem 3
+* Problem 3
 score wasn't showing at the end event though the statements were there. 
 fix: After a call with a tutor i've realised i was putting the statments in the wrong function.
 
 
-* problem 4
+* Problem 4
 Input button was still displaying after re-start.
 fix: added classlist to hide on the reset function.
 
-* problem 5
+* Problem 5
 I tried to implement different levels feature before quiz starts, so users can have multiple options, from easy to hard.Unfortunetly this problem was complicated and took over 5 days to sort. I used google, stack overflow, course tutors and slack but nothing worked. In the end after trying over more than 20 ways to solve it, I managed to actually do solve it. However due to the emmense time this took, the fact that the submition deadline was closing by, and also due to the fact that although i managed to make 3 diffrent levels with various lengths of queastions, they still werent random because I was using the slice method to devide the questions. 
 fix: In the end i've decided to drop the feature as it was wasting a lot of time, giving a lot of stress and it wasnt metioned in the course guidlines.
 
-* problem 6
+* Problem 6
 
 After the previous problem took place, I decided to revert back to an old commit before the whole levels incident when the code was still working and showing all 20 questions. fortunetly things where going well and I even started the read me but soon  i realised a big major problem. I coudnt push the newly written code to the live github site. eventually afer googling and I understood that I coudn not push code because I was on branch. and only you can push from branch main.
 fix: After trying 10 different git commands from slack overflow my mentor helped me walk through the problem and how to go back to branch maain. 
@@ -249,7 +249,7 @@ All content was written using sources and background information from:
 ### Media
 
 - The background image is from google images.
-
+- The icons are from [font Awesome](https://fontawesome.com/)
 ### Work based in other code
 
 + [W3 Schools](https://www.w3schools.com/) - used daily for variety of problems and for deeper understanding of javascript concepts and some old html and css concepts too. specially wit the form input and the media quearies..

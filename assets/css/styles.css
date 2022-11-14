@@ -48,7 +48,7 @@ a {
     padding-bottom: 15px;
 }
 
-/* main div that contains buttons and quiz */
+/* main div that contains buttons and quiz. code inspired web dev simplified */
 .container {
     background-color: #f5a138;
     border-radius: 10px;
@@ -89,12 +89,13 @@ a {
     height: 120px;
     align-items: center;
 }
+/* name input field */
 #myName {
     color: #000000;
     width: 90px;
     border-radius: 8px;
 }
-
+/* submit button */
 #myButton {
     margin-top: 10px;
     height: 40px;
@@ -109,6 +110,7 @@ a {
     padding-bottom: 20px;
 }
 
+/* score on top of thr quiz */
 #above-score {
    width: 70px;
    height: 20px;
@@ -130,7 +132,7 @@ a {
     flex-direction: column;
 }
 
-/* the actual question styling */
+/* the actual question styling code from web dev simplified */
 #question {
 text-align: center;
 font-size: 20px;
@@ -138,33 +140,32 @@ padding-bottom: 20px;
 margin-top: 15px;
 }
 
-/* general rules for all buttons */
+/* general rules for all buttons. code from web dev simplified */
 .btn {
     background-color: #000000;
     color: #ffffff;
     border-radius: 8px;
     padding: 10px 10px;
-    /* margin: 5px; */
     outline: none;
-    /* margin-left: 30px; */
     margin: auto;
     justify-content: center;
     width: 220px;
     height: 45px;
 }
 
+/* restart button at the end */
 #play-again-btn {
     margin-left: 45px;
     margin-top: 40px;
 }
 
-/* when btn is hovered  */
+/* when btn is hovered code from w3c school */
 .btn:hover {
     box-shadow: 0 0 10px 2px;
    
 }
 
-/* when btn is correct */
+/* when btn is correct. code from web dev simplified*/
 .btn.correct {
     background-color: lightgreen;
 }
@@ -173,7 +174,7 @@ margin-top: 15px;
 background-color: red;
 }
 
-/* special stylig for next button */
+/* special stylig for next button. code from web dev simplified */
 .next-btn {
 margin: auto;
 width: 130px;
@@ -205,7 +206,6 @@ width: 130px;
 
 /* general footer styling */
 footer {
-    /* padding: 5%; */
     width: 100%;
     min-height: 8vh;
     background-color: #f5a138;
@@ -221,6 +221,7 @@ footer {
     justify-content: space-evenly;
   }
   
+  /* footer links */
   li>a {
     margin: auto;
     font-size: 25px;
@@ -228,12 +229,13 @@ footer {
 
 
   /* media quearies for responsiveness */
-
+/* for large screen */
   @media (max-width: 1025px) {
     #info {
         font-size: 20px;
     }
   }
+  /* for medium screen */
   @media (max-width: 600px) {
 
     #title {
@@ -252,7 +254,7 @@ footer {
     
   }
 
-
+/* for small screen */
   @media (max-width: 400px) {
 
     #title {
@@ -262,11 +264,10 @@ footer {
     .container {
         width: 215px;
         height: 440px; 
-        /* margin: auto; */
         margin-bottom: 100px;
         margin-top: 100px;
       }
-      #info {
+    #info {
         font-size: 10px;
     }
     #form {
@@ -275,7 +276,6 @@ footer {
         margin-bottom: 0;
         margin-right: 30px;
         font-size: 10px;
-        
     }
 
     .btn {
@@ -302,9 +302,6 @@ footer {
      #myButton {
         width: 80px;
         height: 30px;
-        /* padding: 10px; */
-        /* font-size: 10px;
-        text-align: center; */
     } 
 
     #play-again-btn {
