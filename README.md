@@ -59,7 +59,7 @@ Balsamic wireframe links for the website.
 ### 5. Surface
 * Colours
 
-we have paid a lot of attention to the color scheme. And used 3 colors throught the website. we've chosen green to emphasise the feeling of nature and calmness. 
+we have paid a lot of attention to the color scheme. And used 3 colors throught the website. we've chosen orange for its vividness and black and white to contrast with the orange. 
 
 <img src="assets/images/hex-colors.png" height="500px">
 
@@ -70,7 +70,7 @@ we've used Cormorant Garamond for the main font, and Lora as a backup font for t
 
 ## Existing Features 
 
-+ Main home page consisting of four main sections.
+### Main home page consisting of four main sections.
 
 <img src="assets/images/quiz-web8.png">
 
@@ -84,7 +84,7 @@ we've used Cormorant Garamond for the main font, and Lora as a backup font for t
 3. A form input for users name, once user submits name then the start button will apear, else if name is not submited then an alert text to enter name will apear bellow the form.
 <img src="assets/images/quiz-web3.png">
 
-+ Quiz Area displaying the 20 questions one after the other
+### Quiz Area 
 
 
 1. score displaying area at the top of the quiz. Which shows the number of pointes thus far. Each correct answer equals to one point out of 20 questions.
@@ -97,7 +97,7 @@ we've used Cormorant Garamond for the main font, and Lora as a backup font for t
 3. Underneath the questions are four answer buttons and one next button. Once an answer is chosen, the correct answer button will turn green, and the all the incorrect answer buttons will turn red. This is helpful as it shows the user all the incorrect questions if they do the quiz again.
  <img src="assets/images/quiz-web4.png">
 
-+ Score displaying area at the end of the game.
+### Score displaying area at the end of the game.
 
 1.At the end of the quiz users will get a personalised text showing their score and preif words of encouragement. Aditionaly there is a restart button, which takes users to the start home page and resets all, name, score and questions.
 <img src="assets/images/quiz-web7.png">
@@ -156,47 +156,54 @@ Testing on all devices on mozila is good too.
 6. I would like to be able to give users the option to select the langauge they prefer so that anyone can play no matter what language they speak.
 
 ## Project Bugs and Solutions:
-No known bugs now. But there were quite few problems at every stage. Whenever i fixed a problem there was an another. Here are some.
+No known bugs now. But there were quite few problems at every stage. Whenever a problem was fixed another woud apear. Here are some.
 
 problems and bugs
-problem one 
+
+* problem 1
 array sytax was wrong and it was returning 250 errors 
 fix: fixed array sysntax problem, it was missing = operator at the begining"
 
 
-problem 2
+* problem 2
 questions werent showing on the questions container.
-
-solution, 
-iwas using getelmentbyid eventhough i didnt use id selctor but a class selector.
+fix: I was using getelmentbyid eventhough i didnt use id selctor but a class selector.
 
 
-problem 2 
+* problem 3
 
-answerbuttons and overflowing the center div container.
+answerbuttons were overflowing the center div container.
+solution: styled new buttons, made body wider vh, increased container width and height and styled bottons with with flex column direction.
 
-solution
-styled new buttons, made body wider vh, increased container width and height and styled bottons with with flex column direction
-
-problem 3
-score wasnt showing
-score wasnt displaying correct score
+* problem 3
+score wasn't showing at the end event though the statements were there. 
+fix: After a call with a tutor i've realised i was putting the statments in the wrong function.
 
 
+* problem 4
+Input button was still displaying after re-start.
+fix: added classlist to hide on the reset function.
 
-problem 3 
-input button was still displaying after re-start
+* problem 5
+I tried to implement different levels feature before quiz starts, so users can have multiple options, from easy to hard.Unfortunetly this problem was complicated and took over 5 days to sort. I used google, stack overflow, course tutors and slack but nothing worked. In the end after trying over more than 20 ways to solve it, I managed to actually do solve it. However due to the emmense time this took, the fact that the submition deadline was closing by, and also due to the fact that although i managed to make 3 diffrent levels with various lengths of queastions, they still werent random because I was using the slice method to devide the questions. 
+fix: In the end i've decided to drop the feature as it was wasting a lot of time, giving a lot of stress and it wasnt metioned in the course guidlines.
 
+* problem 6
 
+After the previous problem took place, I decided to revert back to an old commit before the whole levels incident when the code was still working and showing all 20 questions. fortunetly things where going well and I even started the read me but soon  i realised a big major problem. I coudnt push the newly written code to the live github site. eventually afer googling and I understood that I coudn not push code because I was on branch. and only you can push from branch main.
+fix: After trying 10 different git commands from slack overflow my mentor helped me walk through the problem and how to go back to branch maain. 
 
+* Problem 7
 
+After going back to branch main I had to start coding from beggining, thankfully I coppied my code on my noted before the first commit ever happened, but unfortunetly I could only see the html and css code on the local and the live site. The javascript fuctions and the butttons where'nt doing anything. the site was not interactive at all.
+fix: I kept checking and going back the javascript to see if anything is broken and if I messed up the event handelers in any way. After some googling, I realised that after the code was restored to main branch, the javascript link at the bottom the html document was using absolute link for some reason. I change the link to reletive and everthing was working.
 
- 10. Some other problems
-H4 bio heading is not styling css
-Assets folder file paths error due to renaming the folder.
-Hero image sizing was not good quality.
-Git pushing error due to system problemss.
-
+* Some other problems included:
+1: css validation warning for incorrectly linked google fonts.
+2: css validation error for lack of px value.
+3: Jshint 50 plus warnings on for lack of semi colon.
+4: Jshint warning on .5 decimal point use. change it to 0.5 instead.
+5: background image was linking to local browser but not live site. Used reletive file path. 
 
 ## Deployment
 
@@ -206,25 +213,25 @@ Git pushing error due to system problemss.
   - In the GitHub repository, navigate to the Settings tab; 
   - From the source section drop-down menu, select the Master Branch;
   - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
-The live link can be found [here](https://kaltun-dev.github.io/jujube-farm/index.html).
+The live link can be found [here](https://kaltun-dev.github.io/CI-Quiz-App/index.html).
 
 ### Forking the GitHub Repository:
 
 By forking the GitHub Repository you will be able to make a copy of the original repository on your own GitHub account allowing you to view and/or make changes without affecting the original repository by using the following steps:
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/kaltun-dev/jujube-farm)
+1. Log in to GitHub and locate the [GitHub Repository]https://github.com/kaltun-dev/CI-Quiz-App)
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. You should now have a copy of the original repository in your GitHub account.
 
 ### Making a Local Clone
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/kaltun-dev/jujube-farm)
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/kaltun-dev/CI-Quiz-App)
 2. Under the repository name, click "Clone or download".
 3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
 4. Open Git Bash
 5. Change the current working directory to the location where you want the cloned directory to be made.
 6. Type `git clone`, and then paste the URL you copied in Step 3.
 ```
-$ git clone https://github.com/kaltun-dev/jujube-farm
+$ git clone https://github.com/kaltun-dev/CI-Quiz-App
 ```
 7. Press Enter. Your local clone will be created.
 
@@ -234,30 +241,31 @@ $ git clone https://github.com/kaltun-dev/jujube-farm
 
 All content was written using sources and background information from: 
 
-- 
--
--
+- Google search engine.
+
+- [Britannica](https://www.britannica.com/quiz/tech-companies)
+
 
 ### Media
 
-- All pictures and images used in this project are from [CANVA](https://www.canva.com/) 
+- The background image is from google images.
 
 ### Work based in other code
 
-+ [W3 Schools](https://www.w3schools.com/) - used daily for variety of problems and for deeper understanding of both HTML and CSS concepts.
-+ [kevin powels Youtube channel](https://www.youtube.com/watch?v=u044iM9xsWU&list=LL&index=4&t=1157s) - Amazing flex-box tutorial, used it to understand flexbox..
-+ [mohamed haroon Youtube channel](https://www.youtube.com/watch?v=qPvekXHaESc&list=LL&index=2) - Used for hero image using flexbox..
-+ ["Love Running" footer code](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LR101+2021_T1/courseware/4a07c57382724cfda5834497317f24d5/12ba169db7b34b82b137edd825af6a02/) - Used for the footer and why choose us section. 
-+ ["easy toturials youtube channel](https://www.youtube.com/watch?v=oYRda7UtuhA&list=LL&index=6&t=415s) used for our-farm and our- produce section using flexbox.
++ [W3 Schools](https://www.w3schools.com/) - used daily for variety of problems and for deeper understanding of javascript concepts and some old html and css concepts too. specially wit the form input and the media quearies..
++ [Stack overflow ](https://stackoverflow.com/) - stack overflow used daily for every problem, specially the code for sizing length of the content div and footer div.
++ [Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k&t=1084s) - For the code for the quiz logic, questions arrays, asighning questions and answers to buttons and clearing the buttons functions. 
 
 
 ### Acknowledgements
 
 -	To the Code Institute for the course material, lectures and their grounded guidlines for the project.  
 
--	To the Slack community for being so helpful despite asking 3 or more questions everyday. Thank you for the dozens of informative groups.  
+-	To the Slack community for being so helpful, informative and inspiring
 
-- To [W3schools](https://www.w3schools.com/)  for general reference regarding sytax, tags, elements and everything in between.
+- To [W3schools](https://www.w3schools.com/) and [Stack overflow ](https://stackoverflow.com/) for general reference regarding sytax, tags, elements and everything in between.
+- To my mentor Brian bjhore for supporting me, and encouraging me not to give up when everyhing got too hectic and overloaded with pressure at home and with studies. 
+
 
 
 
