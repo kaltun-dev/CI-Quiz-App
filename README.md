@@ -264,7 +264,7 @@ All content was written using sources and background information from:
 -	To the Slack community for being so helpful, informative and inspiring
 
 - To [W3schools](https://www.w3schools.com/) and [Stack overflow ](https://stackoverflow.com/) for general reference regarding sytax, tags, elements and everything in between.
-- To my mentor Brian bjhore for supporting me, and encouraging me not to give up when everyhing got too hectic and overloaded with pressure at home and with studies. 
+- To my mentor Brian Bohare for supporting me, and encouraging me not to give up when everyhing got too hectic and overloaded with pressure at home and with studies. 
 
 
 
