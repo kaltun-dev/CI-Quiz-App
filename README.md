@@ -1,5 +1,5 @@
 
-# THE JUJUBE FARM
+# Tec Companies Quiz
 This is a website for a trivia quiz about tech companies. The aim of this website to test the awareness  of the users knowledge of tech comapanies in a engaging way whilst making them aware of facts they might not have known before. This website consists of a landing page and container that contains 20 questions that apear in sucession ending with a score feedback. 
 <img src="assets/images/responsive.png"/>
 
@@ -46,12 +46,12 @@ Wireframes created with Balsamiq. The project was developed from initial wirefra
 Balsamic wireframe links for the website.
 
 #### Large screen
-* [Home page](https://github.com/kaltun-dev/jujube-farm/blob/main/assets/images/Screenshot-10.png) and [quiz Area](https://github.com/kaltun-dev/jujube-farm/blob/main/assets/images/Screenshot-11.png)
+* [Home page](ithub.com/kaltun-dev/CI-Quiz-App/blob/main/assets/images/wireframe1.png) and [quiz Area](hhttps://github.com/kaltun-dev/CI-Quiz-App/blob/main/assets/images/wireframe3.png)
 <img src="assets/images/wireframe1.png"/>
 <img src="assets/images/wireframe3.png"/>
 
 #### Small screen
-* [Home page](https://github.com/kaltun-dev/jujube-farm/blob/main/assets/images/Screenshot-10.png) and [quiz area](https://github.com/kaltun-dev/jujube-farm/blob/main/assets/images/Screenshot-11.png)
+* [Home page](https://github.com/kaltun-dev/CI-Quiz-App/blob/main/assets/images/wireframe2.png) and [quiz area](https://github.com/kaltun-dev/CI-Quiz-App/blob/main/assets/images/wireframe4.png)
  <img src="assets/images/wireframe2.png"/>
 <img src="assets/images/wireframe4.png"/>
 
@@ -61,7 +61,7 @@ Balsamic wireframe links for the website.
 
 we have paid a lot of attention to the color scheme. And used 3 colors throught the website. we've chosen orange for its vividness and black and white to contrast with the orange. 
 
-<img src="assets/images/hex-colors.png" height="500px">
+<img src="assets/images/hex-colors.png" height="200px">
 
 * Font Selection
  * Google font
