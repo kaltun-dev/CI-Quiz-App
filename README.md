@@ -6,13 +6,13 @@ This is a website for a trivia quiz about tech companies. The aim of this websit
 The deployed website can be viewed here. [TECH COMPANIES QUIZ](https://kaltun-dev.github.io/CI-Quiz-App/index.html).
 
 # Table of contents
-1. [UX ](##UX)
-2. [Technologies](##Technologies)
-3. [Existing features](##Existing-Features)
-4. [Testing](##Testing)
-5. [Bugs and solutions](##Project-Bugs-and-Solutions)
-6. [deployment](##Deployment)
-7. [credits](##Credits)
+- [UX ](#UX)
+- [Technologies](#Technologies)
+- [Existing features](#Existing-Features)
+- [Testing](#Testing)
+- [Bugs and solutions](#Project-Bugs-and-Solutions)
+- [deployment](#Deployment)
+- [credits](#Credits)
 
 ## UX
  ### User Stories
