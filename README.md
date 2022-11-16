@@ -8,9 +8,9 @@ The deployed website can be viewed here. [TECH COMPANIES QUIZ](https://kaltun-de
 # Table of contents
 1. [UX ](##UX)
 2. [Technologies](##Technologies)
-3. [Existing features](##ExistingFeatures)
+3. [Existing features](##Existing-Features)
 4. [Testing](##Testing)
-5. [Bugs and solutions](##ProjectBugsandSolutions)
+5. [Bugs and solutions](##Project-Bugs-and-Solutions)
 6. [deployment](##Deployment)
 7. [credits](##Credits)
 
