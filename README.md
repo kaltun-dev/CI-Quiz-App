@@ -1,5 +1,5 @@
 
-# Tech Companies Quiz
+#  Quiz
 This is a website for a trivia quiz about tech companies. The aim of this website to test the awareness  of the users knowledge of tech comapanies in a engaging way whilst making them aware of facts they might not have known before. This website consists of a landing page and container that contains 20 questions that apear in sucession ending with a score feedback. 
 <img src="assets/images/responsive.png"/>
 
